@@ -21,7 +21,7 @@ export function HlsVideo({
     <>
       <video
         ref={videoRef}
-        className={`absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover ${
+        className={`background-video pointer-events-none absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover ${
           flipped ? "scale-y-[-1]" : ""
         } ${className}`}
         autoPlay
@@ -29,6 +29,7 @@ export function HlsVideo({
         loop
         playsInline
         preload="auto"
+        disablePictureInPicture
       />
       {overlayClassName ? (
         <div className={`absolute inset-0 ${overlayClassName}`} />

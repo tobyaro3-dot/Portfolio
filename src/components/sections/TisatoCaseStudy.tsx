@@ -412,9 +412,6 @@ function TisatoGallerySection() {
                     <h3 className="mt-5 text-3xl font-light text-text-primary">{selected.title}</h3>
                     <p className="mt-4 text-sm leading-7 text-text-primary/72">{selected.caption}</p>
                   </div>
-                  <p className="mt-8 text-xs uppercase tracking-[0.24em] text-white/35">
-                    Placeholder asset for final case-study media
-                  </p>
                 </div>
               </div>
             </motion.div>

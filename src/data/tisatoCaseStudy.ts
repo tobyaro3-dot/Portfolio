@@ -65,8 +65,7 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
     caption: "A clearer request path that captures the details needed before scheduling begins.",
     category: "Intake forms",
     track: "system",
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+    image: "/tisato-structured-intake.png",
     rotation: -4,
   },
   {
@@ -75,8 +74,7 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
     caption: "I mapped the service lifecycle to see where coordination and trust were breaking down.",
     category: "Workflow diagrams",
     track: "system",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    image: "/tisato-workflow-mapping.png",
     rotation: 3,
   },
   {
@@ -85,8 +83,7 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
     caption: "Dispatch became more repeatable once ride data and assignment logic were made explicit.",
     category: "Scheduling logic",
     track: "system",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    image: "/tisato-scheduling-logic.png",
     rotation: -2,
   },
   {
@@ -114,8 +111,7 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
     caption: "Branded apparel and real-world consistency helped the service feel more professional in person.",
     category: "Physical presence",
     track: "brand",
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    image: "/tisato-driver-presence.png",
     rotation: 2,
   },
   {

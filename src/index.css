@@ -45,6 +45,15 @@ video {
   max-width: 100%;
 }
 
+.background-video::-webkit-media-controls,
+.background-video::-webkit-media-controls-panel,
+.background-video::-webkit-media-controls-play-button,
+.background-video::-webkit-media-controls-start-playback-button,
+.background-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 ::selection {
   background: rgba(137, 170, 204, 0.35);
   color: hsl(var(--text));
