@@ -19,7 +19,7 @@ export type Project = {
   span: "third";
   preview: {
     device: "phone";
-    tone: "medical" | "loyalty" | "sport";
+    tone: "medical" | "loyalty" | "sport" | "museum";
     accent: string;
     secondaryAccent: string;
     screenLabel: string;
@@ -209,6 +209,39 @@ export const projects: Project[] = [
         heading: "Impact",
         body:
           "The product is meant to reduce preparation time, help coaches reuse what works, and create a more consistent player-development experience across a youth program.",
+      },
+    ],
+  },
+];
+
+export const researchProjects: Project[] = [
+  {
+    slug: "national-lighthouse-museum",
+    title: "National Lighthouse Museum",
+    logo: "NLM",
+    subtitle:
+      "Studying how visitors navigate a museum when digital tools become part of the experience.",
+    role: "UX Researcher",
+    scope: "Think-Aloud Study, HCI, Museum Experience",
+    context: "Research study for a museum visitor experience",
+    summary:
+      "A future case study focused on observing how people move through a museum experience when digital tools become part of the visit.",
+    tags: ["UX Research", "HCI", "Museum Experience"],
+    image: "/national-lighthouse-museum-cover.png",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "museum",
+      accent: "#c9a96a",
+      secondaryAccent: "#6f8793",
+      screenLabel: "Think-aloud study",
+      metric: "UX research · HCI",
+    },
+    details: [
+      {
+        heading: "Future Case Study",
+        body:
+          "This page is reserved for the National Lighthouse Museum research case study.",
       },
     ],
   },

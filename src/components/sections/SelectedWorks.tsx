@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import type { Project } from "../../data/portfolio";
-import { projects } from "../../data/portfolio";
+import { projects, researchProjects } from "../../data/portfolio";
 import { SECTION_IDS } from "../../lib/constants";
 import { HlsVideo } from "../layout/HlsVideo";
 import { SectionHeader } from "../layout/SectionHeader";
@@ -27,6 +27,10 @@ export function SelectedWorks() {
     }
     if (project.slug === "solmate") {
       navigate("/work/solmate");
+      return;
+    }
+    if (project.slug === "national-lighthouse-museum") {
+      navigate("/work/national-lighthouse-museum");
       return;
     }
 
@@ -78,6 +82,25 @@ export function SelectedWorks() {
               onOpen={handleOpenProject}
             />
           ))}
+        </div>
+        <div className="mt-24 md:mt-28">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
+              UX Research &amp; HCI
+            </p>
+            <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
+              Understanding how people behave before deciding what to build.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:items-stretch lg:gap-6">
+            {researchProjects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                onOpen={handleOpenProject}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <AnimatePresence>

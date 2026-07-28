@@ -23,38 +23,38 @@ export const tisatoHero = {
   eyebrow: "TISATO",
   title: "Improving operational clarity and brand cohesion in NEMT.",
   impact:
-    "I redesigned TISATO across both operations and brand so the service felt clearer, more trustworthy, and easier to move through from first impression to completed ride.",
+    "TISATO supports rides between patients, facilities, dispatchers, and drivers. The real problem was not putting a trip on the calendar. It was turning scattered calls, texts, and forms into a system people could actually rely on.",
 };
 
 export const tisatoInsight = {
   problem:
-    "What I saw first was a split between the inside of the service and the outside of it. Intake was inconsistent, scheduling stayed reactive, and communication broke apart, while the brand and digital touchpoints were not giving people the clarity or reassurance this kind of service needs.",
+    "Ride requests were coming in through calls, texts, and inconsistent forms, so the same trip details kept getting rewritten, clarified, or missed. That made intake harder for elderly patients, gave dispatchers uneven information to work from, and created handoff mistakes between scheduling, drivers, and facility staff.",
   designMove:
-    "So I worked across both layers at once. I restructured intake, scheduling, and communication into clearer workflows, then aligned the identity, website, and touchpoints so the service explained that structure before a ride even began.",
+    "The fix was to build a clearer connection between intake, scheduling, coordination, and confirmation. I simplified what gets captured first, structured the information around dispatch decisions, and aligned the website, brand, and communication touchpoints so the service explained itself before a ride ever started.",
   whyItMatters:
-    "In NEMT, trust starts before operations do. Elderly patients and healthcare partners need the system to work clearly and present itself clearly, otherwise friction shows up before the service has a chance to help.",
+    "In NEMT, confusion does not stay on one screen. It shows up in missed ride details, uncertain pickup times, and extra follow-up for people who are already depending on the system. Elderly patients and facility staff need the process to feel clear from the first request through the final confirmation.",
 };
 
 export const tisatoWorkflow: TisatoWorkflowStep[] = [
   {
-    label: "Discover",
-    detail: "Build trust before the service begins.",
-  },
-  {
     label: "Intake",
-    detail: "Capture the right ride information consistently.",
+    detail: "Capture the trip details once, in a format dispatch can use.",
   },
   {
-    label: "Schedule",
-    detail: "Structure ride coordination into a clearer queue.",
+    label: "Scheduling",
+    detail: "Turn requests into a clear queue instead of loose messages.",
   },
   {
-    label: "Confirm",
-    detail: "Keep drivers, patients, and facilities aligned.",
+    label: "Coordination",
+    detail: "Keep drivers, patients, and facilities working from the same trip details.",
   },
   {
-    label: "Reassure",
-    detail: "Reinforce trust through brand and real-world touchpoints.",
+    label: "Confirmation",
+    detail: "Show what is scheduled, what is sent, and what still needs follow-up.",
+  },
+  {
+    label: "Ride",
+    detail: "Carry the same information through pickup so the trip feels reliable in real life.",
   },
 ];
 
@@ -62,7 +62,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "intake-form",
     title: "Structured intake form",
-    caption: "A clearer request path that captures the details needed before scheduling begins.",
+    caption:
+      "I reduced intake to the trip details dispatch actually needs first, so staff could capture a ride clearly without asking elderly riders to work through unnecessary fields.",
     category: "Intake forms",
     track: "system",
     image: "/tisato-structured-intake.png",
@@ -71,7 +72,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "workflow-map",
     title: "Workflow mapping",
-    caption: "I mapped the service lifecycle to see where coordination and trust were breaking down.",
+    caption:
+      "I mapped the handoff from request to dispatch to see exactly where details were getting lost and where the system needed clearer checkpoints.",
     category: "Workflow diagrams",
     track: "system",
     image: "/tisato-workflow-mapping.png",
@@ -80,7 +82,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "dispatch-logic",
     title: "Scheduling logic",
-    caption: "Dispatch became more repeatable once ride data and assignment logic were made explicit.",
+    caption:
+      "I organized scheduling around what dispatch needs to act on next, so the team could assign rides from reliable details instead of piecing requests back together.",
     category: "Scheduling logic",
     track: "system",
     image: "/tisato-scheduling-logic.png",
@@ -89,7 +92,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "communication-touchpoint",
     title: "Communication checkpoints",
-    caption: "A shared status rhythm reduced confusion between patients, drivers, and facilities.",
+    caption:
+      "I added clear status checkpoints so patients, drivers, and facility staff could see where a ride stood without relying on scattered follow-up.",
     category: "Communication touchpoints",
     track: "system",
     image:
@@ -99,7 +103,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "logo-system",
     title: "Logo and identity",
-    caption: "The visual system was designed to feel legible, calm, and trustworthy in every context.",
+    caption:
+      "I kept the identity calm and legible so the service looked trustworthy before a patient ever had to ask for help.",
     category: "Visual identity",
     track: "brand",
     image: "/tisato-logo-identity-v2.jpg",
@@ -108,7 +113,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "apparel",
     title: "Driver presence",
-    caption: "Branded apparel and real-world consistency helped the service feel more professional in person.",
+    caption:
+      "Consistent branding on staff and vehicles helped the service feel recognizable in person, which matters when riders are older and need reassurance.",
     category: "Physical presence",
     track: "brand",
     image: "/tisato-driver-presence.png",
@@ -117,7 +123,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "website-structure",
     title: "Website structure",
-    caption: "The website was simplified so users could understand the service and move into intake with less friction.",
+    caption:
+      "I simplified the website so people could understand what TISATO does, what information is needed, and how to start a ride request.",
     category: "Website structure",
     track: "brand",
     image:
@@ -127,7 +134,8 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
   {
     id: "content-framework",
     title: "Messaging framework",
-    caption: "Content and communication were shaped to reinforce reliability, clarity, and ease of use.",
+    caption:
+      "I rewrote the messaging around clarity and reassurance so the service explained itself in plain language across touchpoints.",
     category: "Content strategy",
     track: "brand",
     image:
@@ -138,29 +146,29 @@ export const tisatoGalleryItems: TisatoGalleryItem[] = [
 
 export const tisatoOutcomes: TisatoOutcome[] = [
   {
-    title: "Faster scheduling",
-    before: "Scheduling stayed reactive because requests came in with too much ambiguity.",
-    after: "A clearer intake and queue structure made coordination faster and more consistent.",
+    title: "Less ambiguity in ride requests",
+    before: "Key trip details were arriving in different places and getting clarified too late.",
+    after: "A clearer intake path made ride requests easier to capture correctly the first time.",
   },
   {
-    title: "Fewer communication breakdowns",
-    before: "Updates were fragmented across drivers, patients, and facilities.",
-    after: "Shared checkpoints made the service easier to follow at each handoff.",
+    title: "A stronger bridge into scheduling",
+    before: "Dispatch had to interpret scattered information before making a scheduling decision.",
+    after: "Structured trip details gave scheduling a clearer starting point and reduced guesswork.",
   },
   {
-    title: "Easier onboarding and booking confidence",
-    before: "The first impression did not explain the service clearly enough.",
-    after: "Brand and website clarity made the process feel easier to trust from the start.",
+    title: "A workflow that is easier to repeat",
+    before: "Too much of the process depended on memory, follow-up, and manual clarification.",
+    after: "Clearer checkpoints made the workflow easier to repeat across patients, dispatchers, and drivers.",
   },
   {
-    title: "Stronger trust through clearer branding",
-    before: "The external experience did not reflect the level of reliability the service needed.",
-    after: "A more cohesive identity reinforced professionalism in both digital and physical touchpoints.",
+    title: "Better clarity for users and dispatchers",
+    before: "Patients, facilities, and staff were not always working from the same understanding of the trip.",
+    after: "The system made each step easier to read, follow, and confirm before the ride moved forward.",
   },
 ];
 
 export const tisatoReflection = {
   heading: "Reflection",
   body:
-    "This project pushed me to think about systems and perception as one design problem. Operational clarity alone is not enough, and visual trust without structure is not enough either. The value came from aligning both so the service could function clearly and feel clear at the same time.",
+    "This project changed how I think about workflow design. I learned that the hardest part is often not the task itself, but the handoff between people, tools, and moments. If I kept pushing this further, I would test the intake and confirmation steps with more real facility scenarios. It made me more intentional about designing systems that stay clear under real operational pressure.",
 };

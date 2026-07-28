@@ -23,6 +23,8 @@ const toneGradients = {
     "from-[#171934] via-[#111f2f] to-[#080b14]",
   sport:
     "from-[#08111d] via-[#0d1d35] to-[#05070b]",
+  museum:
+    "from-[#17140f] via-[#17232a] to-[#07090c]",
 };
 
 function SportPhonePreview() {
@@ -191,7 +193,10 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
   const cardRef = useRef<HTMLElement | null>(null);
   const aspectClass = "min-h-[540px] lg:h-[640px]";
   const isPhotoCover =
-    project.slug === "solmate" || project.slug === "tap" || project.slug === "tisato";
+    project.slug === "solmate" ||
+    project.slug === "tap" ||
+    project.slug === "tisato" ||
+    project.slug === "national-lighthouse-museum";
 
   const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
     const card = cardRef.current;

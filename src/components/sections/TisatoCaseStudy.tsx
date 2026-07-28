@@ -23,7 +23,7 @@ function BackToWork() {
     <Link
       to="/"
       onClick={() => window.sessionStorage.setItem("portfolio-scroll-target", "work")}
-      className="fixed left-4 top-4 z-50 rounded-full border border-white/10 bg-black/50 px-4 py-2 text-xs uppercase tracking-[0.2em] text-text-primary/80 backdrop-blur-xl transition hover:border-[#8f78c6]/50 hover:text-text-primary md:left-6 md:top-6"
+      className="fixed left-4 top-4 z-50 rounded-full border border-white/10 bg-[linear-gradient(135deg,rgba(8,6,14,0.9),rgba(33,21,58,0.78))] px-4 py-2 text-xs uppercase tracking-[0.2em] text-text-primary/80 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#8f78c6]/50 hover:text-text-primary hover:shadow-[0_18px_55px_rgba(90,50,150,0.2)] md:left-6 md:top-6"
     >
       Back to work
     </Link>
@@ -38,6 +38,7 @@ function AmbientBackground() {
       <div className="absolute right-0 top-[22rem] h-[32rem] w-[32rem] rounded-full bg-[#8f78c6]/14 blur-[120px]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(circle_at_50%_18%,black,transparent_76%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.32)_54%,#0d0816_100%)]" />
+      <div className="absolute inset-x-0 top-[14%] h-px bg-[linear-gradient(90deg,transparent,rgba(199,182,243,0.14),transparent)]" />
     </div>
   );
 }
@@ -84,7 +85,7 @@ function TisatoHero() {
             variants={reveal}
             type="button"
             onClick={() => document.getElementById("tisato-gallery")?.scrollIntoView({ behavior: "smooth" })}
-            className="mt-10 rounded-full border border-[#8f78c6]/45 bg-[#8f78c6]/10 px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_0_42px_rgba(143,120,198,0.16)] transition hover:scale-105 hover:bg-[#8f78c6]/18"
+            className="mt-10 rounded-full border border-[#8f78c6]/45 bg-[linear-gradient(180deg,rgba(143,120,198,0.16),rgba(143,120,198,0.08))] px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_18px_42px_rgba(27,15,49,0.24)] backdrop-blur-md transition hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[linear-gradient(180deg,rgba(143,120,198,0.22),rgba(143,120,198,0.12))]"
           >
             Start walkthrough
           </motion.button>
@@ -94,7 +95,7 @@ function TisatoHero() {
           initial={{ opacity: 0, y: 40, rotateX: 10 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1], delay: 0.25 }}
-          className="relative min-h-[470px]"
+          className="relative min-h-[470px] rounded-[2.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(16,10,27,0.42),rgba(16,10,27,0.12))] p-3 shadow-[0_28px_85px_rgba(0,0,0,0.26)]"
           onMouseMove={(event) => {
             const bounds = event.currentTarget.getBoundingClientRect();
             const px = (event.clientX - bounds.left) / bounds.width - 0.5;
@@ -248,11 +249,12 @@ function TisatoHero() {
 function TisatoInsightPanel() {
   return (
     <section className="relative px-6 py-20 md:px-10 lg:px-16">
-      <div className="mx-auto max-w-[1220px]">
-        <div className="mb-10">
-          <p className="text-xs uppercase tracking-[0.35em] text-muted">Core insight</p>
-          <h2 className="mt-4 text-4xl font-light md:text-6xl">
-            Align the service system and the way people experience it.
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(24,15,39,0.94),rgba(13,8,22,0.9))] p-6 shadow-[0_30px_100px_rgba(0,0,0,0.26)] backdrop-blur-xl md:p-8">
+        <div className="pointer-events-none absolute inset-0 rounded-[2.6rem] bg-[radial-gradient(circle_at_top,rgba(143,120,198,0.14),transparent_45%)]" />
+        <div className="relative mb-10">
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">Context and problem</p>
+          <h2 className="mt-4 max-w-4xl text-4xl font-light leading-[1.04] md:text-6xl">
+            The ride was not the hard part. Keeping the system connected was.
           </h2>
         </div>
 
@@ -261,7 +263,7 @@ function TisatoInsightPanel() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, margin: "-80px" }}
           transition={transition}
-          className="rounded-[2rem] border border-[#8f78c6]/18 bg-[#180f27]/88 p-5 shadow-[0_24px_90px_rgba(90,50,150,0.12)] backdrop-blur-xl md:p-6"
+          className="relative rounded-[2rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(37,22,64,0.82),rgba(24,15,39,0.94))] p-5 shadow-[0_24px_90px_rgba(90,50,150,0.12)] backdrop-blur-xl md:p-6"
         >
           {[
             ["Problem", tisatoInsight.problem],
@@ -282,13 +284,13 @@ function TisatoInsightPanel() {
 function TisatoWorkflowStrip() {
   return (
     <section className="relative px-6 py-20 md:px-10 lg:px-16">
-      <div className="mx-auto max-w-[1220px]">
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,12,31,0.9),rgba(13,8,22,0.96))] p-6 shadow-[0_28px_100px_rgba(0,0,0,0.24)] backdrop-blur-xl md:p-8">
         <div className="mb-8 text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-muted">Workflow</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">System flow</p>
           <h2 className="mx-auto mt-4 max-w-5xl text-4xl font-light leading-[1.04] md:text-6xl">
-            Structure trust
+            From intake to ride,
             <br />
-            into each part of the service.
+            the same details need to carry forward clearly.
           </h2>
         </div>
         <div className="grid gap-4 md:grid-cols-5">
@@ -299,13 +301,14 @@ function TisatoWorkflowStrip() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl"
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="flex h-full min-h-[248px] flex-col rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-shadow duration-300 hover:border-[#8f78c6]/24 hover:shadow-[0_22px_55px_rgba(90,50,150,0.2)]"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#8f78c6]/12 text-sm font-semibold text-[#8f78c6]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(143,120,198,0.2),rgba(143,120,198,0.08))] text-sm font-semibold text-[#ddd0fb] shadow-[0_0_18px_rgba(143,120,198,0.12)]">
                 {index + 1}
               </div>
               <h3 className="mt-4 text-xl text-text-primary">{step.label}</h3>
-              <p className="mt-3 max-w-[18ch] text-sm leading-7 text-text-primary/65 md:max-w-none">{step.detail}</p>
+              <p className="mt-3 max-w-[18ch] text-sm leading-7 text-text-primary/68 md:max-w-none">{step.detail}</p>
             </motion.div>
           ))}
         </div>
@@ -325,7 +328,7 @@ function GalleryCard({
     <button
       type="button"
       onClick={() => onOpen(item)}
-      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] text-left shadow-2xl shadow-black/30 transition-transform duration-500 hover:scale-[1.02]"
+      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] text-left shadow-2xl shadow-black/30 transition duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#8f78c6]/20 hover:shadow-[0_26px_75px_rgba(90,50,150,0.22)]"
       style={{ rotate: `${item.rotation}deg` }}
       aria-label={`Open ${item.title}`}
     >
@@ -335,17 +338,19 @@ function GalleryCard({
           alt={item.title}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,17,29,0.04)_0%,rgba(6,17,29,0.08)_36%,rgba(6,17,29,0.72)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,17,29,0.02)_0%,rgba(6,17,29,0.1)_34%,rgba(6,17,29,0.8)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_42%)] opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
+        <div className="absolute inset-x-5 top-5 h-px bg-[linear-gradient(90deg,rgba(255,255,255,0.18),transparent)] opacity-60" />
       </div>
       <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.24em]">
-        <span className="rounded-full border border-[#8f78c6]/30 bg-[#180f27]/72 px-3 py-1 text-[#efe8ff] backdrop-blur-md">
+        <span className="rounded-full border border-[#8f78c6]/30 bg-[#180f27]/78 px-3 py-1 text-[#efe8ff] shadow-[0_8px_18px_rgba(0,0,0,0.12)] backdrop-blur-md">
           {item.category}
         </span>
-        <span className="rounded-full border border-white/10 bg-black/35 px-3 py-1 text-white/60 backdrop-blur-md">
+        <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-white/60 backdrop-blur-md">
           {item.track}
         </span>
       </div>
-      <div className="absolute inset-x-4 bottom-4 rounded-[1.5rem] bg-[#180f27]/80 p-4 backdrop-blur-md">
+      <div className="absolute inset-x-4 bottom-4 rounded-[1.5rem] border border-white/6 bg-[linear-gradient(180deg,rgba(24,15,39,0.82),rgba(24,15,39,0.94))] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.22)] backdrop-blur-md">
         <h3 className="text-lg text-text-primary">{item.title}</h3>
         <p className="mt-2 text-sm leading-6 text-text-primary/65">{item.caption}</p>
       </div>
@@ -358,15 +363,35 @@ function TisatoGallerySection() {
 
   return (
     <section id="tisato-gallery" className="relative px-6 py-20 md:px-10 lg:px-16">
-      <div className="mx-auto max-w-[1220px]">
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,12,31,0.92),rgba(13,8,22,0.96))] p-6 shadow-[0_30px_110px_rgba(0,0,0,0.25)] backdrop-blur-xl md:p-8">
         <div className="mb-10 text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-muted">Case study gallery</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">Prototype walkthrough</p>
           <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-light md:text-6xl">
-            What I designed across the system and the brand.
+            Ride Intake to Scheduling Flow
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-text-primary/65 md:text-base">
-            This work spanned operational structure, communication, identity, and digital touchpoints. For now, these are placeholders for the final project images and artifacts.
+            This prototype focuses on the path from a ride request to a scheduled trip. The goal was to turn a scattered, manual process into a guided system that captures the right information and moves it toward scheduling clearly.
           </p>
+        </div>
+
+        <div className="mb-10 grid gap-4 md:grid-cols-2">
+          <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-5 text-left shadow-[0_18px_40px_rgba(0,0,0,0.14)] backdrop-blur-xl">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-[#8f78c6]">Suggested flow</p>
+            <ol className="mt-4 space-y-2 text-sm leading-7 text-text-primary/72">
+              <li>1. Start with ride intake</li>
+              <li>2. Enter trip details</li>
+              <li>3. Move into scheduling</li>
+              <li>4. View confirmation or coordination state</li>
+            </ol>
+          </div>
+          <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-5 text-left shadow-[0_18px_40px_rgba(0,0,0,0.14)] backdrop-blur-xl">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-[#8f78c6]">What to notice</p>
+            <ul className="mt-4 space-y-2 text-sm leading-7 text-text-primary/72">
+              <li>How inputs are simplified</li>
+              <li>How decisions are guided</li>
+              <li>How each step leads clearly to the next</li>
+            </ul>
+          </div>
         </div>
 
         <div className="mb-8 text-center">
@@ -395,12 +420,12 @@ function TisatoGallerySection() {
               initial={{ scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#180f27]"
-            >
-              <div className="grid md:grid-cols-[1.1fr_0.9fr]">
-                <img src={selected.image} alt={selected.title} className="h-full max-h-[82vh] w-full object-cover" />
-                <div className="flex flex-col justify-between p-6 text-left">
-                  <div>
+            className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(24,15,39,0.98),rgba(15,10,28,0.98))] shadow-[0_30px_100px_rgba(0,0,0,0.4)]"
+          >
+            <div className="grid md:grid-cols-[1.1fr_0.9fr]">
+              <img src={selected.image} alt={selected.title} className="h-full max-h-[82vh] w-full object-cover" />
+              <div className="flex flex-col justify-between p-6 text-left">
+                <div>
                     <div className="flex flex-wrap gap-2">
                       <span className="rounded-full border border-[#8f78c6]/35 bg-[#8f78c6]/10 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-[#efe8ff]">
                         {selected.category}
@@ -425,11 +450,11 @@ function TisatoGallerySection() {
 function TisatoOutcomes() {
   return (
     <section className="relative px-6 pb-20 pt-20 md:px-10 lg:px-16">
-      <div className="mx-auto max-w-[1220px]">
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,12,31,0.92),rgba(13,8,22,0.96))] p-6 shadow-[0_30px_110px_rgba(0,0,0,0.24)] backdrop-blur-xl md:p-8">
         <div className="mb-8 text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-muted">Outcome</p>
           <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-light md:text-6xl">
-            Clearer operations and stronger confidence around the service.
+            What improved once the workflow had structure.
           </h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -440,14 +465,15 @@ function TisatoOutcomes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.55 }}
-              className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl"
+              whileHover={{ y: -4 }}
+              className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-5 shadow-[0_18px_45px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-shadow duration-300 hover:border-[#8f78c6]/22 hover:shadow-[0_24px_60px_rgba(90,50,150,0.18)]"
             >
               <h3 className="text-xl text-text-primary">{outcome.title}</h3>
-              <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#14191f] p-4">
+              <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#14191f] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">Before</p>
                 <p className="mt-2 text-sm leading-7 text-text-primary/62">{outcome.before}</p>
               </div>
-              <div className="mt-4 rounded-[1.4rem] border border-[#8f78c6]/18 bg-[#180f27] p-4">
+              <div className="mt-4 rounded-[1.4rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(24,15,39,0.98),rgba(30,18,48,0.98))] p-4 shadow-[0_12px_28px_rgba(44,22,78,0.18)]">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#8f78c6]">After</p>
                 <p className="mt-2 text-sm leading-7 text-text-primary/78">{outcome.after}</p>
               </div>
@@ -462,9 +488,10 @@ function TisatoOutcomes() {
 function TisatoReflection() {
   return (
     <section className="relative px-6 pb-28 pt-6 md:px-10 lg:px-16">
-      <div className="mx-auto max-w-[860px] rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center backdrop-blur-xl md:p-8">
+      <div className="mx-auto max-w-[860px] overflow-hidden rounded-[2.2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(36,18,66,0.54),rgba(255,255,255,0.05))] p-6 text-center shadow-[0_28px_90px_rgba(0,0,0,0.24)] backdrop-blur-xl md:p-8">
+        <div className="pointer-events-none absolute inset-0 rounded-[2.2rem] bg-[radial-gradient(circle_at_top,rgba(143,120,198,0.18),transparent_46%)]" />
         <p className="text-xs uppercase tracking-[0.35em] text-muted">{tisatoReflection.heading}</p>
-        <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-text-primary/72 md:text-lg">
+        <p className="relative mx-auto mt-4 max-w-3xl text-base leading-8 text-text-primary/74 md:text-lg">
           {tisatoReflection.body}
         </p>
       </div>

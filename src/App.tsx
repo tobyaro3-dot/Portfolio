@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { ContactFooter } from "./components/sections/ContactFooter";
 import { Hero } from "./components/sections/Hero";
+import { NationalLighthouseMuseumCaseStudy } from "./components/sections/NationalLighthouseMuseumCaseStudy";
 import { SelectedWorks } from "./components/sections/SelectedWorks";
 import { SolmateCaseStudy } from "./components/sections/SolmateCaseStudy";
 import { TapCaseStudy } from "./components/sections/TapCaseStudy";
@@ -57,6 +58,10 @@ export default function App() {
       <Route path="/work/tap" element={<TapCaseStudy />} />
       <Route path="/work/solmate" element={<SolmateCaseStudy />} />
       <Route path="/work/tisato" element={<TisatoCaseStudy />} />
+      <Route
+        path="/work/national-lighthouse-museum"
+        element={<NationalLighthouseMuseumCaseStudy />}
+      />
       <Route path="*" element={<LandingPage />} />
     </Routes>
   );
