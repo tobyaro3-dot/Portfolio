@@ -33,6 +33,10 @@ export function SelectedWorks() {
       navigate("/work/national-lighthouse-museum");
       return;
     }
+    if (project.slug === "why-people-stop-using-apps") {
+      navigate("/work/why-people-stop-using-apps");
+      return;
+    }
 
     setSelectedProject(project);
   };

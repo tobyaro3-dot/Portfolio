@@ -25,6 +25,8 @@ const toneGradients = {
     "from-[#08111d] via-[#0d1d35] to-[#05070b]",
   museum:
     "from-[#17140f] via-[#17232a] to-[#07090c]",
+  research:
+    "from-[#17140f] via-[#17252b] to-[#07090c]",
 };
 
 function SportPhonePreview() {
@@ -196,7 +198,9 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
     project.slug === "solmate" ||
     project.slug === "tap" ||
     project.slug === "tisato" ||
-    project.slug === "national-lighthouse-museum";
+    project.slug === "national-lighthouse-museum" ||
+    project.slug === "why-people-stop-using-apps";
+  const isLongResearchTitle = project.slug === "why-people-stop-using-apps";
 
   const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
     const card = cardRef.current;
@@ -339,7 +343,11 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
       ) : null}
 
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg via-bg/80 to-transparent p-5 pt-24 text-left md:p-7 md:pt-28">
-        <h3 className="font-display text-5xl italic leading-none text-text-primary md:text-6xl">
+        <h3
+          className={`font-display italic leading-none text-text-primary ${
+            isLongResearchTitle ? "text-4xl md:text-5xl" : "text-5xl md:text-6xl"
+          }`}
+        >
           {project.title}
         </h3>
         <p className="mt-3 max-w-xl text-sm leading-6 text-text-primary/75">

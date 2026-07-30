@@ -19,7 +19,7 @@ export type Project = {
   span: "third";
   preview: {
     device: "phone";
-    tone: "medical" | "loyalty" | "sport" | "museum";
+    tone: "medical" | "loyalty" | "sport" | "museum" | "research";
     accent: string;
     secondaryAccent: string;
     screenLabel: string;
@@ -242,6 +242,36 @@ export const researchProjects: Project[] = [
         heading: "Future Case Study",
         body:
           "This page is reserved for the National Lighthouse Museum research case study.",
+      },
+    ],
+  },
+  {
+    slug: "why-people-stop-using-apps",
+    title: "Why Do People Stop Using Apps They Once Loved?",
+    logo: "APP",
+    subtitle:
+      "Tracing how once-loved products quietly lose their place in people's lives.",
+    role: "Generative UX Researcher",
+    scope: "Discovery Research, Literature Review, Study Design",
+    context: "Independent UX research case study before design",
+    summary:
+      "A research case study that reframes app abandonment as a changing relationship between value, context, routine, identity, and alternatives.",
+    tags: ["Generative Research", "Retention", "HCI"],
+    image: "/app-abandonment-cover.svg",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "research",
+      accent: "#c8a86c",
+      secondaryAccent: "#7d949d",
+      screenLabel: "Generative study",
+      metric: "UX research",
+    },
+    details: [
+      {
+        heading: "Future Case Study",
+        body:
+          "This page explores how to study changing relationships with digital products before deciding what to build.",
       },
     ],
   },

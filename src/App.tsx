@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
+import { AppAbandonmentCaseStudy } from "./components/sections/AppAbandonmentCaseStudy";
 import { ContactFooter } from "./components/sections/ContactFooter";
 import { Hero } from "./components/sections/Hero";
 import { NationalLighthouseMuseumCaseStudy } from "./components/sections/NationalLighthouseMuseumCaseStudy";
@@ -61,6 +62,10 @@ export default function App() {
       <Route
         path="/work/national-lighthouse-museum"
         element={<NationalLighthouseMuseumCaseStudy />}
+      />
+      <Route
+        path="/work/why-people-stop-using-apps"
+        element={<AppAbandonmentCaseStudy />}
       />
       <Route path="*" element={<LandingPage />} />
     </Routes>
