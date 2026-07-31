@@ -269,7 +269,7 @@ function Hero() {
   return (
     <section className="relative flex min-h-[100dvh] items-end overflow-hidden px-6 pb-20 pt-32 md:px-10 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
-        <img src="/app-abandonment-cover.svg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-80" />
+        <img src="/app-abandonment-cover.png" alt="" className="absolute inset-0 h-full w-full object-cover opacity-80" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,6,7,0.9)_0%,rgba(5,6,7,0.62)_44%,rgba(5,6,7,0.18)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,6,7,0.16),rgba(5,6,7,0.7)_68%,#050607_100%)]" />
         <div className="halftone absolute inset-0 opacity-10 mix-blend-multiply" />

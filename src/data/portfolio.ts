@@ -257,7 +257,7 @@ export const researchProjects: Project[] = [
     summary:
       "A research case study that reframes app abandonment as a changing relationship between value, context, routine, identity, and alternatives.",
     tags: ["Generative Research", "Retention", "HCI"],
-    image: "/app-abandonment-cover.svg",
+    image: "/app-abandonment-cover.png",
     span: "third",
     preview: {
       device: "phone",
