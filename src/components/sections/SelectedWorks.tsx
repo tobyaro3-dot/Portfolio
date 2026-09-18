@@ -37,6 +37,10 @@ export function SelectedWorks() {
       navigate("/work/why-people-stop-using-apps");
       return;
     }
+    if (project.slug === "trading-journal-behavioral-mirror") {
+      navigate("/work/trading-journal-behavioral-mirror");
+      return;
+    }
 
     setSelectedProject(project);
   };

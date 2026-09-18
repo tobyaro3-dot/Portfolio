@@ -275,6 +275,36 @@ export const researchProjects: Project[] = [
       },
     ],
   },
+  {
+    slug: "trading-journal-behavioral-mirror",
+    title: "Can a Trading Journal Help People Change, Not Just Remember?",
+    logo: "TJ",
+    subtitle:
+      "Researching why documented mistakes still return under pressure.",
+    role: "Generative UX Researcher",
+    scope: "Desk Research, Behavioral Synthesis, Study Design",
+    context: "Pre-product research for an AI-assisted behavioral journal",
+    summary:
+      "A research case study about the gap between recognizing a repeated behavioral pattern afterward and changing it when the next pressured moment arrives.",
+    tags: ["Generative Research", "Behavior Design", "AI Trust"],
+    image: "/trading-journal-cover.svg",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "research",
+      accent: "#d2ad69",
+      secondaryAccent: "#7d949d",
+      screenLabel: "Generative research",
+      metric: "Behavioral mirror",
+    },
+    details: [
+      {
+        heading: "Future Product Bridge",
+        body:
+          "This research frames the behavioral problem before moving into an AI-assisted journal concept.",
+      },
+    ],
+  },
 ];
 
 export const journalEntries: JournalEntry[] = [

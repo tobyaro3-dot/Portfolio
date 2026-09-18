@@ -1,0 +1,94 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="#050607"/>
+  <rect width="1200" height="1600" fill="url(#room)"/>
+  <g opacity="0.62" filter="url(#soft)">
+    <path d="M-120 1030C210 850 545 825 920 900C1110 938 1250 1025 1320 1112V1640H-120V1030Z" fill="url(#desk)"/>
+  </g>
+  <g opacity="0.7">
+    <path d="M180 1010C380 932 622 922 822 972C888 988 923 1015 920 1048C913 1135 751 1194 556 1194C348 1194 178 1122 176 1038C175 1027 176 1018 180 1010Z" fill="#090A0D"/>
+    <path d="M248 962C431 920 650 927 819 983C749 1045 612 1085 450 1085C342 1085 241 1066 169 1034C188 1003 214 979 248 962Z" fill="url(#journal)"/>
+    <path d="M169 1034C241 1066 342 1085 450 1085C612 1085 749 1045 819 983L909 1036C840 1116 671 1172 471 1172C306 1172 162 1134 91 1078L169 1034Z" fill="#07080B"/>
+    <path d="M260 986C417 951 616 958 764 1003" stroke="#E0BE7B" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M236 1018C390 1051 581 1054 738 1024" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="2"/>
+  </g>
+  <g filter="url(#beam)">
+    <path d="M460 -40L710 -20L608 940L225 970L460 -40Z" fill="url(#lightbeam)" opacity="0.42"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="520" cy="810" r="124" fill="url(#mirrorGlow)"/>
+    <circle cx="520" cy="810" r="90" stroke="#D4AD67" stroke-opacity="0.32" stroke-width="1.5"/>
+    <circle cx="520" cy="810" r="42" fill="#0A0C10" stroke="#D4AD67" stroke-opacity="0.44" stroke-width="1.5"/>
+    <path d="M499 810C499 798 508 789 520 789C532 789 541 798 541 810C541 822 532 831 520 831C508 831 499 822 499 810Z" fill="#D4AD67" fill-opacity="0.78"/>
+  </g>
+  <g opacity="0.5">
+    <path d="M726 555C802 552 866 583 919 649" stroke="#D4AD67" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M748 612C823 609 880 638 924 698" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="2"/>
+    <path d="M756 674C817 673 869 699 910 751" stroke="#D4AD67" stroke-opacity="0.12" stroke-width="2"/>
+  </g>
+  <g opacity="0.74">
+    <circle cx="814" cy="331" r="2.2" fill="#E0BE7B"/>
+    <circle cx="761" cy="425" r="1.6" fill="#E0BE7B"/>
+    <circle cx="888" cy="492" r="1.8" fill="#F5DDA6"/>
+    <circle cx="347" cy="464" r="1.6" fill="#F5DDA6"/>
+    <circle cx="411" cy="594" r="1.2" fill="#E0BE7B"/>
+    <circle cx="990" cy="706" r="2" fill="#F5DDA6"/>
+    <circle cx="252" cy="770" r="1.8" fill="#E0BE7B"/>
+  </g>
+  <g opacity="0.22">
+    <rect x="96" y="1312" width="1008" height="1" fill="url(#line)"/>
+    <rect x="146" y="1354" width="730" height="1" fill="url(#line)"/>
+    <rect x="210" y="1396" width="540" height="1" fill="url(#line)"/>
+  </g>
+  <rect width="1200" height="1600" fill="url(#vignette)"/>
+  <rect width="1200" height="1600" fill="url(#grain)" opacity="0.16" style="mix-blend-mode:screen"/>
+  <defs>
+    <radialGradient id="room" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(588 620) rotate(82) scale(957 780)">
+      <stop stop-color="#263243"/>
+      <stop offset="0.34" stop-color="#111821"/>
+      <stop offset="0.72" stop-color="#07090E"/>
+      <stop offset="1" stop-color="#030405"/>
+    </radialGradient>
+    <linearGradient id="desk" x1="80" y1="902" x2="1160" y2="1510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17110D"/>
+      <stop offset="0.42" stop-color="#0D0E12"/>
+      <stop offset="1" stop-color="#020304"/>
+    </linearGradient>
+    <linearGradient id="journal" x1="169" y1="980" x2="819" y2="1015" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19191E"/>
+      <stop offset="0.52" stop-color="#252229"/>
+      <stop offset="1" stop-color="#0F1118"/>
+    </linearGradient>
+    <linearGradient id="lightbeam" x1="518" y1="-40" x2="450" y2="954" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4D694" stop-opacity="0.7"/>
+      <stop offset="0.44" stop-color="#B9915C" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#6C4C2E" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="mirrorGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 810) scale(142)">
+      <stop stop-color="#E0BE7B" stop-opacity="0.28"/>
+      <stop offset="0.34" stop-color="#4F4030" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#06070A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="96" y1="0" x2="1104" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AD67" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#D4AD67"/>
+      <stop offset="1" stop-color="#D4AD67" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 740) rotate(90) scale(980 680)">
+      <stop offset="0.5" stop-color="#050607" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#050607" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#050607"/>
+    </radialGradient>
+    <filter id="soft" x="-220" y="735" width="1640" height="1005" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="beam" x="125" y="-140" width="685" height="1210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="16" r="1" fill="#FFFFFF"/>
+      <circle cx="34" cy="88" r="1" fill="#FFFFFF"/>
+      <circle cx="72" cy="36" r="1" fill="#FFFFFF"/>
+      <circle cx="102" cy="64" r="1" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+</svg>

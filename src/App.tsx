@@ -10,6 +10,7 @@ import { SelectedWorks } from "./components/sections/SelectedWorks";
 import { SolmateCaseStudy } from "./components/sections/SolmateCaseStudy";
 import { TapCaseStudy } from "./components/sections/TapCaseStudy";
 import { TisatoCaseStudy } from "./components/sections/TisatoCaseStudy";
+import { TradingJournalCaseStudy } from "./components/sections/TradingJournalCaseStudy";
 import { SECTION_IDS } from "./lib/constants";
 
 function LandingPage() {
@@ -66,6 +67,10 @@ export default function App() {
       <Route
         path="/work/why-people-stop-using-apps"
         element={<AppAbandonmentCaseStudy />}
+      />
+      <Route
+        path="/work/trading-journal-behavioral-mirror"
+        element={<TradingJournalCaseStudy />}
       />
       <Route path="*" element={<LandingPage />} />
     </Routes>

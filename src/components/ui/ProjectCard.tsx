@@ -199,8 +199,11 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
     project.slug === "tap" ||
     project.slug === "tisato" ||
     project.slug === "national-lighthouse-museum" ||
-    project.slug === "why-people-stop-using-apps";
-  const isLongResearchTitle = project.slug === "why-people-stop-using-apps";
+    project.slug === "why-people-stop-using-apps" ||
+    project.slug === "trading-journal-behavioral-mirror";
+  const isLongResearchTitle =
+    project.slug === "why-people-stop-using-apps" ||
+    project.slug === "trading-journal-behavioral-mirror";
 
   const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
     const card = cardRef.current;
