@@ -1,6 +1,6 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { AppAbandonmentCaseStudy } from "./components/sections/AppAbandonmentCaseStudy";
 import { ContactFooter } from "./components/sections/ContactFooter";
@@ -10,24 +10,28 @@ import { SelectedWorks } from "./components/sections/SelectedWorks";
 import { SolmateCaseStudy } from "./components/sections/SolmateCaseStudy";
 import { TapCaseStudy } from "./components/sections/TapCaseStudy";
 import { TisatoCaseStudy } from "./components/sections/TisatoCaseStudy";
-import { TradingJournalCaseStudy } from "./components/sections/TradingJournalCaseStudy";
+import { TradeTemprCaseStudy } from "./components/sections/TradeTemprCaseStudy";
 import { SECTION_IDS } from "./lib/constants";
 
 function LandingPage() {
+  const returnTarget = useRef<string | null>(null);
+
   useLayoutEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
-    const scrollTarget = window.sessionStorage.getItem("portfolio-scroll-target");
+    // Retain the destination through StrictMode's effect replay.
+    returnTarget.current ??= window.sessionStorage.getItem("portfolio-scroll-target");
+    const scrollTarget = returnTarget.current;
 
     if (scrollTarget) {
       window.sessionStorage.removeItem("portfolio-scroll-target");
       window.history.replaceState(null, "", window.location.pathname);
-      requestAnimationFrame(() => {
-        document.getElementById(scrollTarget)?.scrollIntoView();
+      const frame = requestAnimationFrame(() => {
+        document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "instant" });
       });
-      return;
+      return () => cancelAnimationFrame(frame);
     }
 
     if (window.location.hash && window.location.hash !== `#${SECTION_IDS.home}`) {
@@ -68,9 +72,10 @@ export default function App() {
         path="/work/why-people-stop-using-apps"
         element={<AppAbandonmentCaseStudy />}
       />
+      <Route path="/work/tradetempr" element={<TradeTemprCaseStudy />} />
       <Route
         path="/work/trading-journal-behavioral-mirror"
-        element={<TradingJournalCaseStudy />}
+        element={<Navigate to="/work/tradetempr" replace />}
       />
       <Route path="*" element={<LandingPage />} />
     </Routes>

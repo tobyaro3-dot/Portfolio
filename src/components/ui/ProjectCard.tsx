@@ -193,6 +193,7 @@ function ScreenContent({ project }: { project: Project }) {
 
 export function ProjectCard({ project, onOpen }: ProjectCardProps) {
   const cardRef = useRef<HTMLElement | null>(null);
+  const isTradeTempr = project.slug === "tradetempr";
   const aspectClass = "min-h-[540px] lg:h-[640px]";
   const isPhotoCover =
     project.slug === "solmate" ||
@@ -200,10 +201,9 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
     project.slug === "tisato" ||
     project.slug === "national-lighthouse-museum" ||
     project.slug === "why-people-stop-using-apps" ||
-    project.slug === "trading-journal-behavioral-mirror";
+    project.slug === "tradetempr";
   const isLongResearchTitle =
-    project.slug === "why-people-stop-using-apps" ||
-    project.slug === "trading-journal-behavioral-mirror";
+    project.slug === "why-people-stop-using-apps" || project.slug === "tradetempr";
 
   const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
     const card = cardRef.current;
@@ -264,8 +264,9 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
       />
       <img
         src={project.image}
+        style={isTradeTempr ? { maskImage: "linear-gradient(to bottom, transparent, black 12%)" } : undefined}
         alt=""
-        className={`absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105 ${
+        className={`absolute w-full object-cover transition duration-700 group-hover:scale-105 ${isTradeTempr ? "inset-x-0 bottom-0 top-24 h-[calc(100%-6rem)] object-left-top" : "inset-0 h-full"} ${
           isPhotoCover
             ? "opacity-95"
             : "opacity-25 mix-blend-screen blur-[1px] group-hover:opacity-35 group-hover:brightness-125 group-hover:contrast-125"
@@ -298,7 +299,7 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
         </>
       ) : null}
 
-      <div className="absolute inset-x-5 top-5 flex items-center justify-between text-xs uppercase tracking-[0.22em] text-white/45 md:inset-x-7 md:top-7">
+      <div className="absolute inset-x-5 top-5 flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.22em] text-white/60 md:inset-x-7 md:top-7">
         <span>{project.preview.screenLabel}</span>
         <span>{project.preview.metric}</span>
       </div>
@@ -345,15 +346,15 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
         </div>
       ) : null}
 
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg via-bg/80 to-transparent p-5 pt-24 text-left md:p-7 md:pt-28">
+      <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg via-bg/80 to-transparent p-5 pt-24 text-left md:p-7 md:pt-28 ${isTradeTempr ? "pb-7 md:pb-8" : ""}`}>
         <h3
           className={`font-display italic leading-none text-text-primary ${
-            isLongResearchTitle ? "text-4xl md:text-5xl" : "text-5xl md:text-6xl"
+            isTradeTempr ? "text-[48px] tracking-[-0.025em] md:text-[52px]" : isLongResearchTitle ? "text-4xl md:text-5xl" : "text-5xl md:text-6xl"
           }`}
         >
           {project.title}
         </h3>
-        <p className="mt-3 max-w-xl text-sm leading-6 text-text-primary/75">
+        <p className={`${isTradeTempr ? "mt-4" : "mt-3"} max-w-xl text-sm leading-6 text-text-primary/75`}>
           {project.subtitle}
         </p>
       </div>
@@ -361,7 +362,7 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
       <button
         type="button"
         onClick={() => onOpen(project)}
-        className="absolute inset-0 flex items-center justify-center bg-bg/35 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100"
+        className="absolute inset-0 flex items-center justify-center bg-bg/35 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white"
         aria-label={`Open ${project.title} case study`}
       >
         <GradientBorder innerClassName="items-center bg-white px-5 py-3 text-sm text-bg">

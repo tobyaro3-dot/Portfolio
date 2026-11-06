@@ -37,8 +37,8 @@ export function SelectedWorks() {
       navigate("/work/why-people-stop-using-apps");
       return;
     }
-    if (project.slug === "trading-journal-behavioral-mirror") {
-      navigate("/work/trading-journal-behavioral-mirror");
+    if (project.slug === "tradetempr") {
+      navigate("/work/tradetempr");
       return;
     }
 
@@ -82,7 +82,7 @@ export function SelectedWorks() {
           }
           actionLabel="View all work"
         />
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:items-stretch lg:gap-6">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
@@ -100,7 +100,8 @@ export function SelectedWorks() {
               Understanding how people behave before deciding what to build.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:items-stretch lg:gap-6">
+          <div className="overflow-x-auto pb-3" tabIndex={0} role="region" aria-label="UX Research and HCI projects">
+          <div className="grid min-w-[900px] grid-cols-3 items-stretch gap-5 lg:gap-6">
             {researchProjects.map((project) => (
               <ProjectCard
                 key={project.title}
@@ -108,6 +109,7 @@ export function SelectedWorks() {
                 onOpen={handleOpenProject}
               />
             ))}
+          </div>
           </div>
         </div>
       </div>

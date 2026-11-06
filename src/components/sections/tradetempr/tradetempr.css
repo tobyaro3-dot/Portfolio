@@ -1,0 +1,24 @@
+.tt-case { isolation: isolate; }
+.tt-case .tt-ambient { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 80% 900px at 80% 0, #17232e80, transparent); }
+.tt-case .tt-chapter { border-top: 1px solid rgb(255 255 255 / 7%); }
+.tt-case .tt-split { display: grid; gap: 2.5rem; }
+.tt-case .tt-copy { font-size: 1rem; line-height: 1.95; color: rgb(245 245 245 / 72%); }
+.tt-case .tt-copy > * + * { margin-top: 1.25rem; }
+.tt-case .tt-lead { font-family: "Instrument Serif", serif; font-style: italic; font-size: clamp(1.9rem, 3vw, 2.75rem); line-height: 1.18; color: hsl(var(--text)); }
+.tt-case .tt-artifact { padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid rgb(255 255 255 / 12%); border-radius: 1.5rem; background: rgb(255 255 255 / 2.5%); }
+.tt-case .tt-prominent { background: linear-gradient(145deg, #101c28, #0a1017 70%); }
+.tt-case .tt-interpretation { background: #05090e55; border-color: #a9c6e540; }
+.tt-case .tt-path { margin: 2rem 0; counter-reset: path; }
+.tt-case .tt-path li { counter-increment: path; padding: 1rem 0; border-top: 1px solid #ffffff20; font-size: .875rem; line-height: 1.7; }
+.tt-case .tt-path li::before { content: "0" counter(path); color: #a9c6e5; margin-right: 1rem; font-size: .7rem; }
+.tt-case a:focus-visible { outline: 2px solid #bdd2e9; outline-offset: 5px; border-radius: 4px; }
+@media (min-width: 768px) { .tt-case .tt-split { grid-template-columns: 1fr 1fr; gap: 3.5rem; } }
+@media (prefers-reduced-motion: reduce) { html:has(.tt-case) { scroll-behavior: auto; } .tt-case *, .tt-case *::before { transition: none !important; animation: none !important; } }
+.tt-case .tt-mobile-story, .tt-case .tt-entry-story { display: grid; gap: 2.5rem; align-items: center; }
+.tt-case .tt-mobile-capture { width: min(100%, 280px); margin-inline: auto; }
+.tt-case .tt-image-link { transition: border-color 180ms ease; cursor: zoom-in; }
+.tt-case .tt-image-link:hover { border-color: #a9c6e580; }
+@media (min-width: 768px) {
+  .tt-case .tt-mobile-story { grid-template-columns: minmax(0, 1fr) minmax(240px, .65fr); gap: 5rem; }
+  .tt-case .tt-entry-story { grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: 3rem; align-items: start; }
+}

@@ -113,56 +113,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "tap",
-    title: "TAP",
-    logo: "TAP",
-    subtitle:
-      "Designing a networked loyalty system for local membership-based businesses.",
-    role: "Product Designer & Systems Architect",
-    scope: "Product Strategy, UX Design, Behavioral Systems, Brand & Experience",
-    context: "Concept platform for a multi-business loyalty ecosystem",
-    summary:
-      "I designed TAP as a loyalty system that feels less like a feature and more like a behavioral engine, connecting check-ins, streaks, rewards, and business insight across a network.",
-    tags: ["Product Strategy", "Behavior Design", "Loyalty", "Dashboards"],
-    image: "/tap-cover.png",
-    span: "third",
-    preview: {
-      device: "phone",
-      tone: "loyalty",
-      accent: "#9DBBFF",
-      secondaryAccent: "#7CFFB2",
-      screenLabel: "Streak engine",
-      metric: "Tap to enter",
-    },
-    details: [
-      {
-        heading: "Overview",
-        body:
-          "With TAP, I wanted to replace fragmented check-ins and passive loyalty programs with one unified system where users tap their phone to enter, automatically earn rewards, and build streaks that reinforce consistent behavior.",
-      },
-      {
-        heading: "Problem",
-        body:
-          "What stood out to me was that local businesses often track attendance without really influencing retention. Users lose momentum, while businesses are left reacting too late to at-risk customers.",
-      },
-      {
-        heading: "Insight",
-        body:
-          "The opportunity, as I saw it, was not just to improve loyalty programs, but to redesign engagement itself by combining frictionless interaction, behavioral reinforcement, and networked value.",
-      },
-      {
-        heading: "What Was Designed",
-        body:
-          "I designed tap-based entry, rewards and streak mechanics, user dashboards, achievement systems, business dashboards, at-risk user signals, automated engagement tools, token logic, and the visual identity direction.",
-      },
-      {
-        heading: "Impact",
-        body:
-          "The concept gives users a more engaging reason to return while giving businesses better visibility into behavior, stronger retention tools, and a model that becomes more valuable as more businesses join.",
-      },
-    ],
-  },
-  {
     slug: "solmate",
     title: "SolMate",
     logo: "SolMate",
@@ -209,6 +159,56 @@ export const projects: Project[] = [
         heading: "Impact",
         body:
           "The product is meant to reduce preparation time, help coaches reuse what works, and create a more consistent player-development experience across a youth program.",
+      },
+    ],
+  },
+  {
+    slug: "tap",
+    title: "TAP",
+    logo: "TAP",
+    subtitle:
+      "Designing a networked loyalty system for local membership-based businesses.",
+    role: "Product Designer & Systems Architect",
+    scope: "Product Strategy, UX Design, Behavioral Systems, Brand & Experience",
+    context: "Concept platform for a multi-business loyalty ecosystem",
+    summary:
+      "I designed TAP as a loyalty system that feels less like a feature and more like a behavioral engine, connecting check-ins, streaks, rewards, and business insight across a network.",
+    tags: ["Product Strategy", "Behavior Design", "Loyalty", "Dashboards"],
+    image: "/tap-cover.png",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "loyalty",
+      accent: "#9DBBFF",
+      secondaryAccent: "#7CFFB2",
+      screenLabel: "Streak engine",
+      metric: "Tap to enter",
+    },
+    details: [
+      {
+        heading: "Overview",
+        body:
+          "With TAP, I wanted to replace fragmented check-ins and passive loyalty programs with one unified system where users tap their phone to enter, automatically earn rewards, and build streaks that reinforce consistent behavior.",
+      },
+      {
+        heading: "Problem",
+        body:
+          "What stood out to me was that local businesses often track attendance without really influencing retention. Users lose momentum, while businesses are left reacting too late to at-risk customers.",
+      },
+      {
+        heading: "Insight",
+        body:
+          "The opportunity, as I saw it, was not just to improve loyalty programs, but to redesign engagement itself by combining frictionless interaction, behavioral reinforcement, and networked value.",
+      },
+      {
+        heading: "What Was Designed",
+        body:
+          "I designed tap-based entry, rewards and streak mechanics, user dashboards, achievement systems, business dashboards, at-risk user signals, automated engagement tools, token logic, and the visual identity direction.",
+      },
+      {
+        heading: "Impact",
+        body:
+          "The concept gives users a more engaging reason to return while giving businesses better visibility into behavior, stronger retention tools, and a model that becomes more valuable as more businesses join.",
       },
     ],
   },
@@ -276,34 +276,26 @@ export const researchProjects: Project[] = [
     ],
   },
   {
-    slug: "trading-journal-behavioral-mirror",
-    title: "Can a Trading Journal Help People Change, Not Just Remember?",
-    logo: "TJ",
-    subtitle:
-      "Researching why documented mistakes still return under pressure.",
-    role: "Generative UX Researcher",
-    scope: "Desk Research, Behavioral Synthesis, Study Design",
-    context: "Pre-product research for an AI-assisted behavioral journal",
-    summary:
-      "A research case study about the gap between recognizing a repeated behavioral pattern afterward and changing it when the next pressured moment arrives.",
-    tags: ["Generative Research", "Behavior Design", "AI Trust"],
-    image: "/trading-journal-cover.svg",
+    slug: "tradetempr",
+    title: "TradeTempr",
+    logo: "TT",
+    subtitle: "Designing a trading journal that looks beyond profit to understand how decisions are made.",
+    role: "Product Designer & Developer",
+    scope: "Product Strategy · UX/UI Design · Behavioral Model · Prototyping & Development",
+    context: "Working product · Live demo",
+    summary: "Designing a reflection system that separates trading process from financial outcomes.",
+    tags: ["Product Design & Development"],
+    image: "/tradetempr-card.webp",
     span: "third",
     preview: {
       device: "phone",
       tone: "research",
-      accent: "#d2ad69",
-      secondaryAccent: "#7d949d",
-      screenLabel: "Generative research",
-      metric: "Behavioral mirror",
+      accent: "#89AACC",
+      secondaryAccent: "#89AACC",
+      screenLabel: "Product Design & Development",
+      metric: "2026 · Ongoing",
     },
-    details: [
-      {
-        heading: "Future Product Bridge",
-        body:
-          "This research frames the behavioral problem before moving into an AI-assisted journal concept.",
-      },
-    ],
+    details: [],
   },
 ];
 
