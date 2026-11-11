@@ -67,6 +67,62 @@ export const crmWorkflow: CrmWorkflowStep[] = [
   },
 ];
 
+export const crmRules: { when: string; then: string }[] = [
+  {
+    when: "A new lead is added",
+    then: "The first follow-up is scheduled on a 3, 7, and 14 business-day cadence the team can adjust.",
+  },
+  {
+    when: "A partner replies",
+    then: "Automation stops for that contact until a person reviews the conversation.",
+  },
+  {
+    when: "Someone opts out",
+    then: "The contact is suppressed, so no follow-up is suggested again.",
+  },
+  {
+    when: "An email address is invalid",
+    then: "Follow-ups hold until the address is reviewed and fixed.",
+  },
+  {
+    when: "A draft is prepared or copied",
+    then: "Nothing is marked as sent. Only a send recorded with evidence counts.",
+  },
+  {
+    when: "Contact details change",
+    then: "Any existing draft needs a fresh review, and text a person wrote by hand is kept.",
+  },
+  {
+    when: "A CSV import finds a duplicate",
+    then: "The import stops for review. Rows already saved stay saved.",
+  },
+  {
+    when: "Every hour",
+    then: "Recommendations and the CEO dashboard are recalculated from the latest records.",
+  },
+];
+
+export const crmArchitecture = [
+  {
+    label: "Mobile web app",
+    detail: "Private, phone-first interface for daily work. Only the TISATO Google account can open it.",
+  },
+  {
+    label: "Rules engine",
+    detail:
+      "Google Apps Script holds the follow-up, suppression, and pipeline rules, kept separate from the code that reads and writes the sheet.",
+  },
+  {
+    label: "Google Sheet CRM",
+    detail:
+      "A nine-tab sheet tracks contacts, activity history, drafts, vendor applications, bookings, and payments. The original tracker tab stays untouched.",
+  },
+  {
+    label: "Hourly job",
+    detail: "A scheduled trigger reconciles recommendations and refreshes the dashboard.",
+  },
+];
+
 export const crmGalleryItems: CrmGalleryItem[] = [
   {
     id: "dashboard",

@@ -2,7 +2,9 @@ import { useLayoutEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
+  crmArchitecture,
   crmGalleryItems,
+  crmRules,
   crmHero,
   crmInsight,
   crmOutcomes,
@@ -276,6 +278,89 @@ function CrmWorkflowStrip() {
   );
 }
 
+function CrmRulesSection() {
+  return (
+    <section className="relative px-6 py-20 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(24,15,39,0.94),rgba(13,8,22,0.92))] p-6 shadow-[0_30px_100px_rgba(0,0,0,0.26)] backdrop-blur-xl md:p-8">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-muted">Automation rules</p>
+            <h2 className="mt-4 max-w-3xl text-4xl font-light leading-[1.04] md:text-6xl">
+              Knowing when to{" "}
+              <span className="font-display italic">stop</span> mattered as much as knowing when to send.
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-text-primary/65 md:text-base">
+            Every rule is deterministic, so the team can predict exactly what the system will do. No paid AI decides who gets contacted, and no message goes out on its own.
+          </p>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2">
+          {crmRules.map((rule, index) => (
+            <motion.div
+              key={rule.when}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: (index % 2) * 0.06 }}
+              className="grid grid-cols-[auto_1fr] gap-4 rounded-[1.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.025))] p-5"
+            >
+              <span className="mt-0.5 h-fit self-start rounded-full border border-[#8f78c6]/30 bg-[#8f78c6]/12 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-[#d8c8ff]">
+                When
+              </span>
+              <div>
+                <p className="text-base text-text-primary">{rule.when}</p>
+                <p className="mt-2 text-sm leading-6 text-text-primary/65">
+                  <span className="mr-2 text-[10px] uppercase tracking-[0.22em] text-[#8f78c6]">Then</span>
+                  {rule.then}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CrmArchitectureSection() {
+  return (
+    <section className="relative px-6 py-20 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1220px] overflow-hidden rounded-[2.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,12,31,0.9),rgba(13,8,22,0.96))] p-6 shadow-[0_28px_100px_rgba(0,0,0,0.24)] backdrop-blur-xl md:p-8">
+        <div className="mb-10 text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">How it&apos;s built</p>
+          <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-light leading-[1.04] md:text-6xl">
+            Free tools, built on what the team already used.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-text-primary/65 md:text-base">
+            Instead of buying a CRM subscription, I extended the spreadsheet TISATO already kept. That meant no migration, no monthly cost, and no new tool for the team to learn.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-4">
+          {crmArchitecture.map((layer, index) => (
+            <motion.div
+              key={layer.label}
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className="relative rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)]"
+            >
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#8f78c6]">Layer {index + 1}</p>
+              <h3 className="mt-3 text-xl text-text-primary">{layer.label}</h3>
+              <p className="mt-3 text-sm leading-7 text-text-primary/68">{layer.detail}</p>
+              {index < crmArchitecture.length - 1 ? (
+                <span aria-hidden="true" className="absolute -right-3 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border border-[#8f78c6]/35 bg-[#180f27] text-xs text-[#d8c8ff] md:flex">
+                  ↔
+                </span>
+              ) : null}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function GalleryCard({
   item,
   onOpen,
@@ -487,7 +572,9 @@ export function TisatoCrmCaseStudy() {
       <CrmHero />
       <CrmInsightPanel />
       <CrmWorkflowStrip />
+      <CrmRulesSection />
       <CrmGallerySection />
+      <CrmArchitectureSection />
       <CrmOutcomes />
       <CrmReflection />
     </main>
