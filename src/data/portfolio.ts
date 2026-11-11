@@ -214,6 +214,34 @@ export const projects: Project[] = [
   },
 ];
 
+export const automationProjects: Project[] = [
+  {
+    slug: "tisato-crm",
+    title: "TISATO CRM",
+    logo: "CRM",
+    subtitle:
+      "A private mobile CRM that turns facility contacts into approved partners and paying rides.",
+    role: "Designer & Builder",
+    scope: "CRM Design, Marketing Automation, Follow-up Systems",
+    context: "Live partnership CRM for a NEMT service",
+    location: "Orlando, Florida",
+    summary:
+      "I designed and built a follow-up engine that tells the team who to contact today, pauses automatically when partners reply, and keeps a person in charge of every message.",
+    tags: ["CRM", "Marketing Automation", "Google Apps Script"],
+    image: "/tisato-crm/cover.webp",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "medical",
+      accent: "#8f78c6",
+      secondaryAccent: "#55D6BE",
+      screenLabel: "Follow-up engine",
+      metric: "Human-reviewed",
+    },
+    details: [],
+  },
+];
+
 export const researchProjects: Project[] = [
   {
     slug: "national-lighthouse-museum",

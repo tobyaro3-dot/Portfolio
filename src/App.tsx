@@ -10,6 +10,7 @@ import { SelectedWorks } from "./components/sections/SelectedWorks";
 import { SolmateCaseStudy } from "./components/sections/SolmateCaseStudy";
 import { TapCaseStudy } from "./components/sections/TapCaseStudy";
 import { TisatoCaseStudy } from "./components/sections/TisatoCaseStudy";
+import { TisatoCrmCaseStudy } from "./components/sections/TisatoCrmCaseStudy";
 import { TradeTemprCaseStudy } from "./components/sections/TradeTemprCaseStudy";
 import { SECTION_IDS } from "./lib/constants";
 
@@ -64,6 +65,7 @@ export default function App() {
       <Route path="/work/tap" element={<TapCaseStudy />} />
       <Route path="/work/solmate" element={<SolmateCaseStudy />} />
       <Route path="/work/tisato" element={<TisatoCaseStudy />} />
+      <Route path="/work/tisato-crm" element={<TisatoCrmCaseStudy />} />
       <Route
         path="/work/national-lighthouse-museum"
         element={<NationalLighthouseMuseumCaseStudy />}

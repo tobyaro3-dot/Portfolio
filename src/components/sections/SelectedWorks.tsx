@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import type { Project } from "../../data/portfolio";
-import { projects, researchProjects } from "../../data/portfolio";
+import { automationProjects, projects, researchProjects } from "../../data/portfolio";
 import { SECTION_IDS } from "../../lib/constants";
 import { HlsVideo } from "../layout/HlsVideo";
 import { SectionHeader } from "../layout/SectionHeader";
@@ -19,6 +19,10 @@ export function SelectedWorks() {
   const handleOpenProject = (project: Project) => {
     if (project.slug === "tisato") {
       navigate("/work/tisato");
+      return;
+    }
+    if (project.slug === "tisato-crm") {
+      navigate("/work/tisato-crm");
       return;
     }
     if (project.slug === "tap") {
@@ -90,6 +94,25 @@ export function SelectedWorks() {
               onOpen={handleOpenProject}
             />
           ))}
+        </div>
+        <div className="mt-24 md:mt-28">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
+              Marketing &amp; Automation
+            </p>
+            <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
+              Systems that turn contacts into customers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">
+            {automationProjects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                onOpen={handleOpenProject}
+              />
+            ))}
+          </div>
         </div>
         <div className="mt-24 md:mt-28">
           <div className="mb-8 max-w-2xl">
