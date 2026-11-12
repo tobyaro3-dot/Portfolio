@@ -56,7 +56,7 @@ function SportPhonePreview() {
               className={`flex h-10 items-center justify-center rounded-full text-sm ${
                 item.active
                   ? "bg-[#f2a900] text-[#060f1e] shadow-[0_0_24px_rgba(242,169,0,0.22)]"
-                  : "text-white/45"
+                  : "text-white/60"
               }`}
             >
               {item.icon}
@@ -70,7 +70,7 @@ function SportPhonePreview() {
           ←
         </div>
         <div>
-          <p className="text-[10px] uppercase tracking-[0.16em] text-white/30">Capture</p>
+          <p className="text-[10px] uppercase tracking-[0.16em] text-white/60">Capture</p>
           <p className="mt-1 text-lg font-semibold text-white">Record Pain Point</p>
         </div>
       </div>
@@ -82,7 +82,7 @@ function SportPhonePreview() {
             className={`rounded-full border px-3 py-1.5 text-[11px] font-semibold ${
               index === 0
                 ? "border-[#f2a900] bg-[#f2a900] text-[#060f1e]"
-                : "border-white/10 text-white/45"
+                : "border-white/10 text-white/60"
             }`}
           >
             {team}
@@ -109,7 +109,7 @@ function SportPhonePreview() {
       </div>
 
       <div className="mt-4 rounded-[1.35rem] border border-white/10 bg-[#0d1f3c] p-4">
-        <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">Live transcript</p>
+        <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">Live transcript</p>
         <p className="mt-3 text-sm leading-6 text-white/72">
           My U14 boys are struggling to progress forward. They take too many touches in tight spaces and do not commit to drives.
         </p>
@@ -128,14 +128,14 @@ function ScreenContent({ project }: { project: Project }) {
       <>
         <div className="grid grid-cols-2 gap-2">
           <div className="rounded-2xl bg-white/[0.08] p-3">
-            <p className="text-[9px] uppercase tracking-[0.2em] text-white/45">
+            <p className="text-[9px] uppercase tracking-[0.2em] text-white/60">
               Patient
             </p>
             <div className="mt-3 h-2 rounded-full bg-white/35" />
             <div className="mt-2 h-2 w-2/3 rounded-full bg-white/20" />
           </div>
           <div className="rounded-2xl bg-white/[0.08] p-3">
-            <p className="text-[9px] uppercase tracking-[0.2em] text-white/45">
+            <p className="text-[9px] uppercase tracking-[0.2em] text-white/60">
               Pickup
             </p>
             <div className="mt-3 h-2 rounded-full bg-[var(--accent)]/70" />
@@ -174,7 +174,7 @@ function ScreenContent({ project }: { project: Project }) {
           ))}
         </div>
         <div className="mt-3 rounded-2xl bg-white/[0.08] p-3">
-          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-white/45">
+          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-white/60">
             <span>Rewards</span>
             <span>+320</span>
           </div>
@@ -333,7 +333,7 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
                           {project.logo}
                         </span>
                       </div>
-                      <p className="mt-4 text-[10px] uppercase tracking-[0.22em] text-white/45">
+                      <p className="mt-4 text-[10px] uppercase tracking-[0.22em] text-white/60">
                         {project.role}
                       </p>
                     </div>
@@ -367,8 +367,7 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
         aria-label={`Open ${project.title} case study`}
       >
         <GradientBorder innerClassName="items-center bg-white px-5 py-3 text-sm text-bg">
-          View -
-          <span className="ml-1 font-display italic">{project.title}</span>
+          View case study
         </GradientBorder>
       </button>
     </article>

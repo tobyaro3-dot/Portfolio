@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
-import { roles, videoSource } from "../../data/portfolio";
+import { videoSource } from "../../data/portfolio";
 import { useGsapContext } from "../../hooks/useGsapContext";
-import { useRoleCycle } from "../../hooks/useRoleCycle";
 import { SECTION_IDS } from "../../lib/constants";
 import { gsap } from "../../lib/animation";
 import { HlsVideo } from "../layout/HlsVideo";
@@ -16,7 +15,6 @@ const messyPhrase = "XQ7 / 4R9N :: V3LTA-09 // KRYPT";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const roleIndex = useRoleCycle(roles.length, 2000);
   const [isPhraseLocked, setIsPhraseLocked] = useState(false);
 
   useGsapContext(sectionRef, () => {
@@ -53,69 +51,64 @@ export function Hero() {
 
     timeline.fromTo(
       ".hero-name-reveal",
-      { opacity: 0, y: 56, scale: 0.98, filter: "blur(14px)" },
+      { opacity: 0, y: 56, scale: 0.98 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        filter: "blur(0px)",
         duration: 1.15,
-        clearProps: "transform,filter",
+        clearProps: "transform",
       },
       0.28,
     );
 
     timeline.fromTo(
       ".hero-role-reveal",
-      { opacity: 0, y: 22, filter: "blur(10px)" },
+      { opacity: 0, y: 22 },
       {
         opacity: 1,
         y: 0,
-        filter: "blur(0px)",
         duration: 0.78,
-        clearProps: "transform,filter",
+        clearProps: "transform",
       },
       0.68,
     );
 
     timeline.fromTo(
       ".hero-phrase-reveal",
-      { opacity: 0, y: 26, scaleX: 0.86, filter: "blur(13px)" },
+      { opacity: 0, y: 26, scaleX: 0.86 },
       {
         opacity: 1,
         y: 0,
         scaleX: 1,
-        filter: "blur(0px)",
         duration: 0.88,
-        clearProps: "transform,filter",
+        clearProps: "transform",
       },
       0.92,
     );
 
     timeline.fromTo(
       ".hero-cta-reveal",
-      { opacity: 0, y: 24, scale: 0.96, filter: "blur(8px)" },
+      { opacity: 0, y: 24, scale: 0.96 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        filter: "blur(0px)",
         duration: 0.72,
         stagger: 0.08,
-        clearProps: "transform,filter",
+        clearProps: "transform",
       },
       1.22,
     );
 
     timeline.fromTo(
       ".hero-scroll-reveal",
-      { opacity: 0, y: 18, filter: "blur(6px)" },
+      { opacity: 0, y: 18 },
       {
         opacity: 1,
         y: 0,
-        filter: "blur(0px)",
         duration: 0.72,
-        clearProps: "transform,filter",
+        clearProps: "transform",
       },
       1.62,
     );
@@ -145,14 +138,7 @@ export function Hero() {
           Tobi Aro.
         </h1>
         <p className="hero-role-reveal mx-auto mb-5 text-lg text-text-primary/85 md:text-2xl">
-          A{" "}
-          <span
-            key={roleIndex}
-            className="inline-block animate-role-fade-in font-display italic text-text-primary"
-          >
-            {roles[roleIndex]}
-          </span>{" "}
-          in Orlando, FL.
+          Product designer and UX researcher in Orlando, FL.
         </p>
         <button
           type="button"
@@ -252,7 +238,7 @@ export function Hero() {
               scrollToSection(SECTION_IDS.work);
             }}
           >
-            See Works
+            See my work
           </Button>
           <Button
             href={`#${SECTION_IDS.contact}`}
@@ -263,7 +249,7 @@ export function Hero() {
               scrollToSection(SECTION_IDS.contact);
             }}
           >
-            Reach out...
+            Get in touch
           </Button>
         </div>
       </div>

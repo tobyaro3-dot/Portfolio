@@ -11,8 +11,8 @@ import {
 } from "../../data/tapCaseStudy";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const };
@@ -127,12 +127,12 @@ function InteractionBeacon() {
       type="button"
       onClick={() => document.getElementById("tap-factor-rail")?.scrollIntoView({ behavior: "smooth", block: "center" })}
       className="group relative mx-auto cursor-pointer overflow-hidden rounded-[1.4rem] border border-[#c9a84c]/35 bg-[linear-gradient(135deg,rgba(201,168,76,0.18),rgba(232,201,122,0.08)_45%,rgba(255,255,255,0.08))] px-7 py-4 text-center shadow-[0_0_32px_rgba(201,168,76,0.12)] backdrop-blur-xl transition duration-300 hover:scale-[1.03] hover:border-[#e8c97a]/55 hover:shadow-[0_0_48px_rgba(201,168,76,0.18)]"
-      aria-label="Click to interact with the TAP product demo"
+      aria-label="Jump to the TAP product demo"
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-70 transition duration-500 group-hover:translate-x-6" />
       <span className="relative z-10 block">
         <span className="block font-mono text-[10px] uppercase tracking-[0.34em] text-[#e8c97a]">Interactive Demo</span>
-        <span className="mt-1 block font-display text-3xl italic leading-none text-[#fff7e7]">Click to interact</span>
+        <span className="mt-1 block font-display text-3xl italic leading-none text-[#fff7e7]">Try the demo</span>
       </span>
     </button>
   );
@@ -161,7 +161,7 @@ function TapHero({ onStart }: { onStart: () => void }) {
             onClick={onStart}
             className="mt-10 rounded-full border border-[#c9a84c]/35 bg-[#c9a84c]/12 px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_0_42px_rgba(201,168,76,0.14)] transition hover:scale-105 hover:bg-[#c9a84c]/18"
           >
-            Start walkthrough
+            Try the demo
           </motion.button>
         </motion.div>
 
@@ -223,7 +223,7 @@ function TapHero({ onStart }: { onStart: () => void }) {
               </p>
             </div>
             <div className="mt-4 rounded-[1.3rem] border-l-2 border-[#c9a84c] bg-[#100f0e] px-4 py-3">
-              <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/45">
+              <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
                 <span>Apple Wallet pass</span>
                 <span>Ready</span>
               </div>
@@ -269,9 +269,9 @@ function TapInsightPanel({ activeFactorId }: { activeFactorId: TapFactorId }) {
     <AnimatePresence mode="wait">
       <motion.div
         key={factor.id}
-        initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: -18, filter: "blur(8px)" }}
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -18 }}
         transition={transition}
         className="rounded-[2rem] border border-[#c9a84c]/18 bg-[#141211]/88 p-5 shadow-[0_24px_90px_rgba(201,168,76,0.06)] backdrop-blur-xl md:p-6"
       >
@@ -283,7 +283,7 @@ function TapInsightPanel({ activeFactorId }: { activeFactorId: TapFactorId }) {
           ["Why It Matters", factor.whyItMatters],
         ].map(([label, copy]) => (
           <div key={label} className="mt-4 border-t border-white/10 pt-4">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-white/60">{label}</p>
             <p className="mt-2 text-sm leading-7 text-text-primary/75">{copy}</p>
           </div>
         ))}
@@ -338,7 +338,7 @@ function PhoneShell({
                 className={`flex h-10 items-center justify-center rounded-full text-sm transition ${
                   activeScreen === id
                     ? "bg-[#c9a84c] text-[#0a0a0a] shadow-[0_0_24px_rgba(201,168,76,0.18)]"
-                    : "text-white/45 hover:bg-white/[0.05] hover:text-white/70"
+                    : "text-white/60 hover:bg-white/[0.05] hover:text-white/70"
                 }`}
               >
                 <TapIcon kind={kind as "entry" | "attendance" | "rewards" | "operator"} />
@@ -384,13 +384,13 @@ function EntryScreen({
         <p className="mt-4 text-center font-headline text-sm font-black uppercase tracking-[0.26em] text-white">
           TokenTap Access
         </p>
-        <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">
+        <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">
           Where entry becomes consistency
         </p>
 
         <div className="mt-5 space-y-3">
           {["Username", "Email address", "Membership code"].map((field) => (
-            <div key={field} className="border border-white/10 bg-[#1c1b1b] px-4 py-4 text-sm uppercase tracking-[0.14em] text-white/35">
+            <div key={field} className="border border-white/10 bg-[#1c1b1b] px-4 py-4 text-sm uppercase tracking-[0.14em] text-white/60">
               {field}
             </div>
           ))}
@@ -435,7 +435,7 @@ function AttendanceScreen({
           ←
         </button>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">Attendance</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">Attendance</p>
           <h3 className="mt-1 font-headline text-lg font-black uppercase tracking-[0.12em] text-white">Automatic log</h3>
         </div>
       </div>
@@ -444,7 +444,7 @@ function AttendanceScreen({
         <div className="flex items-center justify-between">
           <div>
             <p className="font-headline text-sm font-black uppercase tracking-[0.18em] text-white">Rhein Athletic Club</p>
-            <p className="mt-1 text-xs text-white/45">Entry confirmed with one tap</p>
+            <p className="mt-1 text-xs text-white/60">Entry confirmed with one tap</p>
           </div>
           <div className="rounded-full bg-[#c9a84c] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#0a0a0a]">
             Logged
@@ -458,7 +458,7 @@ function AttendanceScreen({
       <div className={`mt-5 rounded-[1.8rem] border border-white/10 bg-[#171414] p-5 transition ${zoneActive("attendance-log")}`}>
         <div className="flex items-center justify-between">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#c9a84c]">Today</p>
-          <p className="text-[11px] text-white/40">4:32 PM</p>
+          <p className="text-[11px] text-white/60">4:32 PM</p>
         </div>
         <div className="mt-4 space-y-3">
           {[
@@ -468,20 +468,20 @@ function AttendanceScreen({
           ].map(([title, meta]) => (
             <div key={title} className="rounded-[1.1rem] border border-white/10 bg-[#1c1b1b] px-4 py-3">
               <div className="text-sm font-medium text-white">{title}</div>
-              <div className="mt-1 text-xs text-white/45">{meta}</div>
+              <div className="mt-1 text-xs text-white/60">{meta}</div>
             </div>
           ))}
         </div>
       </div>
 
       <div className={`mt-5 rounded-[1.8rem] border border-white/10 bg-[#171414] p-5 transition ${zoneActive("attendance-feed")}`}>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">Recent visits</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">Recent visits</p>
         <div className="mt-4 space-y-3">
           {["Today", "Yesterday", "Tue", "Mon"].map((day, index) => (
             <div key={day} className="flex items-center justify-between rounded-[1rem] bg-[#1c1b1b] px-4 py-3">
               <div>
                 <div className="text-sm text-white">Rhein Athletic Club</div>
-                <div className="mt-1 text-xs text-white/45">{index === 0 ? "4:32 PM" : "5:10 PM"}</div>
+                <div className="mt-1 text-xs text-white/60">{index === 0 ? "4:32 PM" : "5:10 PM"}</div>
               </div>
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#e8c97a]">{day}</div>
             </div>
@@ -506,7 +506,7 @@ function RewardsScreen({
           ←
         </button>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">Streaks</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">Streaks</p>
           <h3 className="mt-1 font-headline text-lg font-black uppercase tracking-[0.12em] text-white">Momentum</h3>
         </div>
       </div>
@@ -532,7 +532,7 @@ function RewardsScreen({
       </div>
 
       <div className={`mt-5 rounded-[1.8rem] border border-white/10 bg-[#171414] p-5 transition ${zoneActive("rewards-milestones")}`}>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">Milestones</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">Milestones</p>
         <div className="mt-4 space-y-3">
           {[
             { title: "3 visits", meta: "Free guest pass", done: true },
@@ -542,9 +542,9 @@ function RewardsScreen({
             <div key={title} className="flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#1c1b1b] px-4 py-3">
               <div>
                 <div className="text-sm text-white">{title}</div>
-                <div className="mt-1 text-xs text-white/45">{meta}</div>
+                <div className="mt-1 text-xs text-white/60">{meta}</div>
               </div>
-              <div className={`rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] ${done ? "bg-[#c9a84c] text-[#0a0a0a]" : "bg-white/5 text-white/45"}`}>
+              <div className={`rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] ${done ? "bg-[#c9a84c] text-[#0a0a0a]" : "bg-white/5 text-white/60"}`}>
                 {done ? "Unlocked" : "Pending"}
               </div>
             </div>
@@ -580,7 +580,7 @@ function OperatorScreen({ zoneActive }: { zoneActive: (zone: string) => string }
           ].map(([value, label]) => (
             <div key={label} className="rounded-[1.2rem] border border-white/10 bg-[#1c1b1b] p-4 text-center">
               <div className="font-headline text-3xl font-black text-[#e8c97a]">{value}</div>
-              <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">{label}</div>
+              <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/60">{label}</div>
             </div>
           ))}
         </div>
@@ -588,8 +588,8 @@ function OperatorScreen({ zoneActive }: { zoneActive: (zone: string) => string }
 
       <div className={`mt-5 rounded-[1.8rem] border border-white/10 bg-[#171414] p-5 transition ${zoneActive("operator-risk")}`}>
         <div className="flex items-center justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">At risk</p>
-          <p className="text-[11px] text-white/40">Members who dropped below weekly rhythm</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">At risk</p>
+          <p className="text-[11px] text-white/60">Members who dropped below weekly rhythm</p>
         </div>
         <div className="mt-4 space-y-3">
           {[
@@ -600,7 +600,7 @@ function OperatorScreen({ zoneActive }: { zoneActive: (zone: string) => string }
             <div key={name} className="flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#1c1b1b] px-4 py-3">
               <div>
                 <div className="text-sm text-white">{name}</div>
-                <div className="mt-1 text-xs text-white/45">{meta}</div>
+                <div className="mt-1 text-xs text-white/60">{meta}</div>
               </div>
               <div className="rounded-full bg-[#2b2413] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#e8c97a]">Review</div>
             </div>
@@ -609,7 +609,7 @@ function OperatorScreen({ zoneActive }: { zoneActive: (zone: string) => string }
       </div>
 
       <div className={`mt-5 rounded-[1.8rem] border border-white/10 bg-[#171414] p-5 transition ${zoneActive("operator-members")}`}>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">Most active members</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">Most active members</p>
         <div className="mt-4 space-y-3">
           {[
             ["Ari P.", "11 visit streak"],
@@ -619,7 +619,7 @@ function OperatorScreen({ zoneActive }: { zoneActive: (zone: string) => string }
             <div key={name} className="flex items-center justify-between rounded-[1rem] bg-[#1c1b1b] px-4 py-3">
               <div>
                 <div className="text-sm text-white">{name}</div>
-                <div className="mt-1 text-xs text-white/45">{meta}</div>
+                <div className="mt-1 text-xs text-white/60">{meta}</div>
               </div>
               <div className="text-[#e8c97a]">
                 <TapIcon kind="streak" />
@@ -689,7 +689,7 @@ function TapOutcomes() {
             >
               <h3 className="text-xl text-text-primary">{outcome.title}</h3>
               <div className="mt-5 rounded-[1.4rem] border border-white/10 bg-[#171414] p-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">Before</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60">Before</p>
                 <p className="mt-2 text-sm leading-7 text-text-primary/65">{outcome.before}</p>
               </div>
               <div className="mt-4 rounded-[1.4rem] border border-[#c9a84c]/18 bg-[#1b170f] p-4">
@@ -744,10 +744,10 @@ export function TapCaseStudy() {
           <div className="mb-10">
             <p className="text-xs uppercase tracking-[0.35em] text-muted">Interactive product demo</p>
             <h2 className="mt-4 text-4xl font-light md:text-6xl">
-              Highlight the system decision that matters.
+              Pick a part of the system to see how it works.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-text-primary/65 md:text-base">
-              Each layer shows how a simple tap becomes entry, attendance, motivation, and retention without adding more friction.
+              Each tab opens one layer: entry, attendance, streaks, and what the operator sees.
             </p>
           </div>
 

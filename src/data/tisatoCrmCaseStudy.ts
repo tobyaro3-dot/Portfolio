@@ -25,8 +25,8 @@ export const crmHero = {
   impact:
     "TISATO's growth depends on partnerships with assisted living homes, clinics, and referral sources. Winning one takes several touches: an introduction, follow-ups, often a vendor application, then a wait for approval. I designed and built a private mobile CRM that moves each contact from first conversation to vendor approval, booking, and payment, so no lead goes cold.",
   meta: [
-    ["Role", "Designer & builder (AI-assisted development)"],
-    ["Tools", "Google Sheets, Google Apps Script, OpenAI Codex"],
+    ["Role", "Designer & builder"],
+    ["Tools", "Google Sheets, Google Apps Script"],
     ["Launched", "October 2026"],
   ] as const,
 };
@@ -220,5 +220,5 @@ export const crmOutcomes: CrmOutcome[] = [
 export const crmReflection = {
   heading: "Reflection",
   body:
-    "This project taught me that automation for a small business is mostly about restraint. The hardest decisions were what the system should not do on its own: send messages, guess at approvals, or touch patient data. It launched recently, so the next step is measurement: on-time follow-up rate, lead-to-approval rate, time to approval, and which lead sources produce booked rides. I'd also shorten the draft review screen and test on a physical iPhone.",
+    "The hardest calls on this project were about what the system shouldn't do on its own: send messages, guess at approvals, or touch patient data. It launched recently, so the next step is measurement: on-time follow-up rate, lead-to-approval rate, time to approval, and which lead sources produce booked rides. I'd also shorten the draft review screen and test on a physical iPhone.",
 };

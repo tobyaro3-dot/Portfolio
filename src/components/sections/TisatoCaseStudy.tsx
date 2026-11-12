@@ -12,8 +12,8 @@ import {
 } from "../../data/tisatoCaseStudy";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const };
@@ -49,12 +49,12 @@ function InteractionBeacon() {
       type="button"
       onClick={() => document.getElementById("tisato-gallery")?.scrollIntoView({ behavior: "smooth", block: "start" })}
       className="group relative mx-auto cursor-pointer overflow-hidden rounded-[1.5rem] border border-[#8f78c6]/35 bg-[linear-gradient(135deg,rgba(90,50,150,0.22),rgba(143,120,198,0.12)_45%,rgba(255,255,255,0.08))] px-7 py-4 text-center shadow-[0_0_32px_rgba(143,120,198,0.14)] backdrop-blur-xl transition duration-300 hover:scale-[1.03] hover:border-[#c7b6f3]/55 hover:shadow-[0_0_48px_rgba(143,120,198,0.18)]"
-      aria-label="Click to interact with the TISATO gallery"
+      aria-label="Jump to the TISATO gallery"
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-70 transition duration-500 group-hover:translate-x-6" />
       <span className="relative z-10 block">
         <span className="block text-[10px] uppercase tracking-[0.34em] text-[#8f78c6]">Case study gallery</span>
-        <span className="mt-1 block font-display text-3xl italic leading-none text-[#f3ecff]">Click to interact</span>
+        <span className="mt-1 block font-display text-3xl italic leading-none text-[#f3ecff]">Open the gallery</span>
       </span>
     </button>
   );
@@ -87,7 +87,7 @@ function TisatoHero() {
             onClick={() => document.getElementById("tisato-gallery")?.scrollIntoView({ behavior: "smooth" })}
             className="mt-10 rounded-full border border-[#8f78c6]/45 bg-[linear-gradient(180deg,rgba(143,120,198,0.16),rgba(143,120,198,0.08))] px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_18px_42px_rgba(27,15,49,0.24)] backdrop-blur-md transition hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[linear-gradient(180deg,rgba(143,120,198,0.22),rgba(143,120,198,0.12))]"
           >
-            Start walkthrough
+            See the flow
           </motion.button>
         </motion.div>
 
@@ -175,16 +175,16 @@ function TisatoHero() {
               <p className="text-xs uppercase tracking-[0.22em] text-text-primary/42">Ride confirmed</p>
               <div className="mt-4 grid gap-3">
                 <div className="rounded-[1rem] bg-white/[0.03] px-3 py-3">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/38">Pickup window</p>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/60">Pickup window</p>
                   <p className="mt-1 text-sm text-text-primary/78">10:30 AM - 10:45 AM</p>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-[1rem] bg-white/[0.03] px-3 py-3">
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/38">Vehicle</p>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/60">Vehicle</p>
                     <p className="mt-1 text-sm text-text-primary/78">TIS-24</p>
                   </div>
                   <div className="rounded-[1rem] bg-white/[0.03] px-3 py-3">
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/38">Status</p>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/60">Status</p>
                     <p className="mt-1 text-sm text-[#d8c8ff]">Sent</p>
                   </div>
                 </div>
@@ -259,8 +259,8 @@ function TisatoInsightPanel() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={transition}
           className="relative rounded-[2rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(37,22,64,0.82),rgba(24,15,39,0.94))] p-5 shadow-[0_24px_90px_rgba(90,50,150,0.12)] backdrop-blur-xl md:p-6"
@@ -470,7 +470,7 @@ function TisatoOutcomes() {
             >
               <h3 className="text-xl text-text-primary">{outcome.title}</h3>
               <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#14191f] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">Before</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60">Before</p>
                 <p className="mt-2 text-sm leading-7 text-text-primary/62">{outcome.before}</p>
               </div>
               <div className="mt-4 rounded-[1.4rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(24,15,39,0.98),rgba(30,18,48,0.98))] p-4 shadow-[0_12px_28px_rgba(44,22,78,0.18)]">

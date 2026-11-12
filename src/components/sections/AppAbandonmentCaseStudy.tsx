@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.52, ease: [0.22, 1, 0.36, 1] as const };
@@ -67,7 +67,7 @@ const evidenceMoments = [
     title: "The last event is not always the beginning.",
     body: "A cancellation, uninstall, or storage cleanup may only be when the person finally notices a relationship that had already changed.",
     source: "The report separates the final exit from the earlier drift in value or context.",
-    response: "The study starts with timelines, not a single exit question.",
+    response: "The study has people walk through a timeline instead of naming one reason they left.",
     marker: "left-[24%] top-[62%]",
   },
   {
@@ -76,7 +76,7 @@ const evidenceMoments = [
     title: "The same usage decline can mean several things.",
     body: "Falling activity could signal frustration, success, seasonality, routine disruption, or healthy withdrawal.",
     source: "Behavioral logs show what happened, but not what the person expected, felt, or resisted.",
-    response: "Behavioral data is used for comparison, not treated as the whole truth.",
+    response: "Usage data gets compared against what people say. It doesn't override them.",
     marker: "left-[52%] top-[36%]",
   },
   {
@@ -94,7 +94,7 @@ const evidenceMoments = [
     title: "Early guesses need to be tested before they become insights.",
     body: "The report frames expected patterns as things to test, not findings, because the interviews and diaries have not been run yet.",
     source: "Status: study plan; no findings are claimed yet.",
-    response: "The page presents an honest study plan instead of fake results.",
+    response: "I'm sharing the plan as it stands, with no results claimed.",
     marker: "left-[42%] top-[78%]",
   },
 ];
@@ -311,9 +311,9 @@ function ProblemSpace() {
       <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>
           <Eyebrow>Why this mattered</Eyebrow>
-          <p className="mt-5 max-w-2xl text-3xl font-light leading-tight text-text-primary md:text-5xl">
-            The first question sounded simple. Then it started falling apart.
-          </p>
+          <h2 className="mt-5 max-w-2xl text-3xl font-light leading-tight text-text-primary md:text-5xl">
+            &ldquo;Why do people stop using apps?&rdquo; turned out to be six different questions.
+          </h2>
           <div className="mt-6 max-w-xl space-y-5 text-base leading-8 text-text-primary/66">
             <p>
               I started with a familiar product question: why do people stop using apps? The more I looked at it, the less simple that question felt.
@@ -355,7 +355,7 @@ function QuestionsAndApproach() {
         <div>
           <Eyebrow>Research strategy</Eyebrow>
           <h2 className="mt-5 text-4xl font-light leading-[1.04] text-text-primary md:text-6xl">
-            I treated abandonment as a timeline, not a yes-or-no state.
+            I planned to map each person's history with the app over time.
           </h2>
           <p className="mt-6 text-base leading-8 text-text-primary/66">
             Before I could explain why people left, I needed to understand what changed first: the product, the person's context, the routine around it, or the meaning it once had.
@@ -441,7 +441,7 @@ function EvidenceReplay() {
           </h2>
         </div>
         <p className="max-w-2xl text-base leading-8 text-text-primary/66">
-          Not the uninstall. Not the final missed session. The study is built to notice earlier signals: fading value, broken cues, substitution, and the difference between a lapse and a healthy ending.
+          The uninstall is usually the last step. The study is built to catch earlier signals: fading value, broken cues, substitution, and the difference between a lapse and a healthy ending.
         </p>
       </div>
 
@@ -553,10 +553,10 @@ function InsightShift() {
         </div>
         <div className="border-t border-white/8 px-8 py-12 text-center md:px-12">
           <p className="font-display text-6xl italic leading-none text-text-primary md:text-8xl">
-            Less use is not always less value.
+            Using an app less can mean it did its job.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-primary/62">
-            That was the turning point. A decline can be a product problem, a life change, a completed job, or a boundary. The analysis needed to tell those endings apart.
+            A decline can be a product problem, a life change, a completed job, or a boundary. The analysis needed to tell those endings apart.
           </p>
         </div>
       </div>

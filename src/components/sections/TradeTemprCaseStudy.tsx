@@ -18,7 +18,7 @@ function Hero() {
       </motion.div>
       <div className="mt-12 md:mt-16"><Capture name="home" hero /></div>
       <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
-        <div className="tt-copy"><p>I designed and built TradeTempr to help traders review how they followed their own process, alongside what they earned or lost.</p><p className="text-sm text-text-primary/55">Built with AI assistance. Behavioral effectiveness is not yet validated.</p></div>
+        <div className="tt-copy"><p>I designed and built TradeTempr to help traders review how they followed their own process, alongside what they earned or lost.</p><p className="text-sm text-text-primary/55">Behavioral effectiveness is not yet validated.</p></div>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-7">{metadata.map(([label, value]) => <div key={label} className={label === "Scope" ? "col-span-2 row-start-2" : ""}><dt className="text-[10px] uppercase tracking-[0.2em] text-[#a9c6e5]">{label}</dt><dd className="mt-2 text-sm leading-6 text-text-primary/75">{value}</dd></div>)}</dl>
       </div>
       <nav aria-label="Case study chapters" className="mt-14 grid grid-cols-2 gap-x-6 border-t border-white/15 pt-6 md:grid-cols-4">{chapters.map(([id, label], index) => <a key={id} href={`#${id}`} className="py-3 text-xs leading-6 text-text-primary/60 transition hover:text-white"><span className="mr-2 text-[#a9c6e5]/70">0{index + 1}</span>{label}</a>)}</nav>

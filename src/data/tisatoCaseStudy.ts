@@ -170,5 +170,5 @@ export const tisatoOutcomes: TisatoOutcome[] = [
 export const tisatoReflection = {
   heading: "Reflection",
   body:
-    "This project changed how I think about workflow design. I learned that the hardest part is often not the task itself, but the handoff between people, tools, and moments. If I kept pushing this further, I would test the intake and confirmation steps with more real facility scenarios. It made me more intentional about designing systems that stay clear under real operational pressure.",
+    "This project changed how I think about workflow design. I learned that most of the mistakes happened at handoffs between scheduling, drivers, and facility staff. If I kept pushing this further, I would test the intake and confirmation steps with more real facility scenarios. It made me more intentional about designing systems that stay clear under real operational pressure.",
 };

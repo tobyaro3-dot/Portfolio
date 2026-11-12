@@ -89,7 +89,7 @@ export const tapFactors: TapFactor[] = [
     designMove:
       "I turned visits into visible streaks, milestone unlocks, and simple rewards so the product reinforces consistency instead of just documenting it.",
     whyItMatters:
-      "That gives each visit a little momentum. Logging becomes a behavior loop, not just a record.",
+      "That way each visit counts toward the next one.",
   },
   {
     id: "operator-view",
@@ -155,5 +155,5 @@ export const tapOutcomes = [
 export const tapReflection = {
   heading: "Reflection",
   body:
-    "While working on TAP, I kept coming back to the idea that behavior is not shaped by big features, but by repeated moments. For this system, that moment is entry. Once that became frictionless, consistency followed.",
+    "Working on TAP, I kept coming back to how often people repeat one small moment: walking in the door. If that moment is quick and counts for something, it is easier to build a habit around it. The whole design is built on that idea.",
 };

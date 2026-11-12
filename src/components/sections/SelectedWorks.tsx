@@ -73,15 +73,15 @@ export function SelectedWorks() {
           align="center"
           title={
             <>
-              Designing{" "}
+              Things I&apos;ve{" "}
               <span className="font-display italic text-text-primary">
-                systems
+                designed
               </span>{" "}
-              that make{" "}
+              and{" "}
               <span className="font-display italic text-text-primary">
-                complex
-              </span>{" "}
-              things feel simple.
+                built
+              </span>
+              .
             </>
           }
           actionLabel="View all work"
@@ -97,11 +97,11 @@ export function SelectedWorks() {
         </div>
         <div className="mt-24 md:mt-28">
           <div className="mb-8 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
+            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/60">
               UX Research &amp; HCI
             </p>
             <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
-              Understanding how people behave before deciding what to build.
+              Usability tests and research plans from UCF and my own projects.
             </p>
           </div>
           <div className="overflow-x-auto pb-3" tabIndex={0} role="region" aria-label="UX Research and HCI projects">
@@ -118,11 +118,11 @@ export function SelectedWorks() {
         </div>
         <div className="mt-24 md:mt-28">
           <div className="mb-8 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
+            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/60">
               Marketing &amp; Automation
             </p>
             <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
-              Systems that turn contacts into customers.
+              CRM and follow-up systems for a real business.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">

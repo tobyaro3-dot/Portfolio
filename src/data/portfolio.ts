@@ -66,7 +66,7 @@ export const projects: Project[] = [
     title: "TISATO",
     logo: "TISATO",
     subtitle:
-      "Improving operational clarity and brand cohesion in a real-world NEMT service.",
+      "Website, booking intake, and brand for a medical transportation company in Central Florida.",
     role: "Product & Systems Designer",
     scope: "Operations, Workflows, Brand Identity, Digital Presence",
     context: "Live non-emergency medical transportation service",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     title: "SolMate",
     logo: "SolMate",
     subtitle:
-      "Designing structured practice systems for youth soccer coaches.",
+      "A practice-planning app for the youth soccer coaches I work with at Sol SC.",
     role: "Product Designer",
     scope: "UX Design, Workflow Systems, Mobile Product Design",
     context: "Concept product tailored for the Sol SC youth program",
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     title: "TAP",
     logo: "TAP",
     subtitle:
-      "Designing a networked loyalty system for local membership-based businesses.",
+      "Tap-to-enter check-in and attendance streaks for membership-based businesses.",
     role: "Product Designer & Systems Architect",
     scope: "Product Strategy, UX Design, Behavioral Systems, Brand & Experience",
     context: "Concept platform for a multi-business loyalty ecosystem",
@@ -198,7 +198,7 @@ export const projects: Project[] = [
       {
         heading: "Insight",
         body:
-          "The opportunity, as I saw it, was not just to improve loyalty programs, but to redesign engagement itself by combining frictionless interaction, behavioral reinforcement, and networked value.",
+          "Most loyalty programs only count visits. I wanted check-in itself to give people a reason to come back.",
       },
       {
         heading: "What Was Designed",
@@ -248,7 +248,7 @@ export const researchProjects: Project[] = [
     title: "National Lighthouse Museum",
     logo: "NLM",
     subtitle:
-      "Studying how visitors navigate a museum when digital tools become part of the experience.",
+      "A UCF HCI team study of a museum companion app, tested with think-aloud sessions.",
     role: "UX Researcher",
     scope: "Think-Aloud Study, HCI, Museum Experience",
     context: "Research study for a museum visitor experience",
@@ -278,7 +278,7 @@ export const researchProjects: Project[] = [
     title: "Why Do People Stop Using Apps They Once Loved?",
     logo: "APP",
     subtitle:
-      "Tracing how once-loved products quietly lose their place in people's lives.",
+      "A research plan for learning why people drift away from apps they used to rely on.",
     role: "Generative UX Researcher",
     scope: "Discovery Research, Literature Review, Study Design",
     context: "Independent UX research case study before design",
@@ -307,7 +307,7 @@ export const researchProjects: Project[] = [
     slug: "tradetempr",
     title: "TradeTempr",
     logo: "TT",
-    subtitle: "Designing a trading journal that looks beyond profit to understand how decisions are made.",
+    subtitle: "A trading journal that scores how well you followed your own plan, win or lose.",
     role: "Product Designer & Developer",
     scope: "Product Strategy · UX/UI Design · Behavioral Model · Prototyping & Development",
     context: "Working product · Live demo",
@@ -410,6 +410,10 @@ export const stats: StatItem[] = [
 ];
 
 export const socials: SocialLink[] = [
+  {
+    label: "Email",
+    href: "mailto:toby.aro3@gmail.com",
+  },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/alex-aro-446487239/",

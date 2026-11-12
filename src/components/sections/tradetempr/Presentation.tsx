@@ -38,7 +38,7 @@ export function Capture({ name, hero = false }: { name: keyof typeof captures; h
     </a>
     <figcaption className="mt-4 grid gap-1 text-xs leading-6 text-text-primary/65">
       <span>{capture.caption}</span>
-      <span className="text-[10px] uppercase tracking-[0.12em] text-text-primary/45">Synthetic demo data · Open image for detail</span>
+      <span className="text-[10px] uppercase tracking-[0.12em] text-text-primary/60">Synthetic demo data · Open image for detail</span>
     </figcaption>
   </figure>;
 }

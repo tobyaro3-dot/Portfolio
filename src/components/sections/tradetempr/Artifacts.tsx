@@ -9,7 +9,7 @@ export function OutcomeProcess() {
     </div>
     {[["A", "Profit", "Broke a stated rule"], ["B", "Loss", "Followed the stated plan"]].map(([id, outcome, process]) =>
       <div key={id} className="grid grid-cols-[0.5fr_1fr_1.3fr] items-center gap-3 border-b border-white/10 py-7">
-        <span className="font-display text-3xl italic text-text-primary/40">{id}</span><span className="text-lg">{outcome}</span><span className="text-sm leading-6 text-[#bdd2e9]">{process}</span>
+        <span className="font-display text-3xl italic text-text-primary/60">{id}</span><span className="text-lg">{outcome}</span><span className="text-sm leading-6 text-[#bdd2e9]">{process}</span>
       </div>)}
     <figcaption className="mt-6 text-xs leading-6 text-text-primary/50">Conceptual examples, not participant data. Financial outcome does not determine TT.</figcaption>
   </figure>;
@@ -45,7 +45,7 @@ export function EntryEvolution() {
   ];
   return <figure className="tt-artifact">
     <div className="grid gap-10 md:grid-cols-2">{flows.map(({ label, items }) => <div key={label}>
-      <Eyebrow>{label}</Eyebrow><ol className="mt-6 border-l border-white/15 pl-5">{items.map((item, index) => <li key={item} className="py-2 text-sm leading-6"><span className="mr-4 text-text-primary/35">{String(index + 1).padStart(2, '0')}</span>{item}</li>)}</ol>
+      <Eyebrow>{label}</Eyebrow><ol className="mt-6 border-l border-white/15 pl-5">{items.map((item, index) => <li key={item} className="py-2 text-sm leading-6"><span className="mr-4 text-text-primary/60">{String(index + 1).padStart(2, '0')}</span>{item}</li>)}</ol>
     </div>)}</div>
     <figcaption className="mt-8 border-t border-white/10 pt-5 text-xs leading-6 text-text-primary/55">Reconstructed from the August 24, 2026 code change. Optional details move behind disclosure; financial results receive their own stage. Not a usability-test result.</figcaption>
   </figure>;

@@ -15,8 +15,8 @@ import {
 } from "../../data/tisatoCrmCaseStudy";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const };
@@ -59,7 +59,7 @@ function InteractionBeacon() {
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-70 transition duration-500 group-hover:translate-x-6" />
       <span className="relative z-10 block">
         <span className="block text-[10px] uppercase tracking-[0.34em] text-[#8f78c6]">Case study gallery</span>
-        <span className="mt-1 block font-display text-3xl italic leading-none text-[#f3ecff]">Click to interact</span>
+        <span className="mt-1 block font-display text-3xl italic leading-none text-[#f3ecff]">Open the screens</span>
       </span>
     </button>
   );
@@ -99,7 +99,7 @@ function CrmHero() {
             onClick={() => document.getElementById("crm-gallery")?.scrollIntoView({ behavior: "smooth" })}
             className="mt-10 rounded-full border border-[#8f78c6]/45 bg-[linear-gradient(180deg,rgba(143,120,198,0.16),rgba(143,120,198,0.08))] px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_18px_42px_rgba(27,15,49,0.24)] backdrop-blur-md transition hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[linear-gradient(180deg,rgba(143,120,198,0.22),rgba(143,120,198,0.12))]"
           >
-            Start walkthrough
+            See the screens
           </motion.button>
         </motion.div>
 
@@ -153,12 +153,12 @@ function CrmHero() {
               {["3", "7", "14"].map((days) => (
                 <div key={days} className="rounded-[1rem] bg-white/[0.04] px-2 py-3 text-center">
                   <p className="text-lg text-text-primary/85">{days}</p>
-                  <p className="mt-1 text-[9px] uppercase tracking-[0.16em] text-text-primary/38">Days</p>
+                  <p className="mt-1 text-[9px] uppercase tracking-[0.16em] text-text-primary/60">Days</p>
                 </div>
               ))}
             </div>
             <div className="mt-3 rounded-[1rem] border border-[#8f78c6]/20 bg-[#8f78c6]/10 px-3 py-3">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/45">On reply or opt-out</p>
+              <p className="text-[10px] uppercase tracking-[0.18em] text-text-primary/60">On reply or opt-out</p>
               <p className="mt-1 text-sm text-[#d8c8ff]">Paused for review</p>
             </div>
           </motion.div>
@@ -194,7 +194,7 @@ function CrmHero() {
                 >
                   <div>
                     <p className="text-sm text-text-primary/80">{who}</p>
-                    <p className="mt-0.5 text-[11px] text-text-primary/45">{task}</p>
+                    <p className="mt-0.5 text-[11px] text-text-primary/60">{task}</p>
                   </div>
                   <span className="whitespace-nowrap text-[10px] uppercase tracking-[0.18em] text-[#bda7f0]">{status}</span>
                 </motion.div>
@@ -215,13 +215,13 @@ function CrmInsightPanel() {
         <div className="relative mb-10">
           <p className="text-xs uppercase tracking-[0.35em] text-muted">Context and problem</p>
           <h2 className="mt-4 max-w-4xl text-4xl font-light leading-[1.04] md:text-6xl">
-            Leads didn&apos;t go cold from a lack of interest. They went cold from a lack of follow-up.
+            Follow-ups lived in someone&apos;s memory, so they slipped.
           </h2>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={transition}
           className="relative rounded-[2rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(37,22,64,0.82),rgba(24,15,39,0.94))] p-5 shadow-[0_24px_90px_rgba(90,50,150,0.12)] backdrop-blur-xl md:p-6"
@@ -249,9 +249,9 @@ function CrmWorkflowStrip() {
         <div className="mb-8 text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-muted">System flow</p>
           <h2 className="mx-auto mt-4 max-w-5xl text-4xl font-light leading-[1.04] md:text-6xl">
-            From first contact to paid ride,
+            How a contact moves from
             <br />
-            every lead knows its next step.
+            first meeting to booked ride.
           </h2>
         </div>
         <div className="grid gap-4 md:grid-cols-5">
@@ -286,12 +286,12 @@ function CrmRulesSection() {
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-muted">Automation rules</p>
             <h2 className="mt-4 max-w-3xl text-4xl font-light leading-[1.04] md:text-6xl">
-              Knowing when to{" "}
-              <span className="font-display italic">stop</span> mattered as much as knowing when to send.
+              Most of the rules decide when to{" "}
+              <span className="font-display italic">hold back</span>.
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-text-primary/65 md:text-base">
-            Every rule is deterministic, so the team can predict exactly what the system will do. No paid AI decides who gets contacted, and no message goes out on its own.
+            Every rule is deterministic, so the team can predict exactly what the system will do. Plain rules decide who shows up on the list, and no message goes out on its own.
           </p>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
@@ -460,7 +460,7 @@ function CrmGallerySection() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-text-primary/45">{sampleDataNote}</p>
+        <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-text-primary/60">{sampleDataNote}</p>
       </div>
 
       <AnimatePresence>
@@ -497,7 +497,7 @@ function CrmGallerySection() {
                     <h3 className="mt-5 text-3xl font-light text-text-primary">{selected.title}</h3>
                     <p className="mt-4 text-sm leading-7 text-text-primary/72">{selected.caption}</p>
                   </div>
-                  <p className="mt-6 text-xs leading-6 text-text-primary/45">{sampleDataNote}</p>
+                  <p className="mt-6 text-xs leading-6 text-text-primary/60">{sampleDataNote}</p>
                 </div>
               </div>
             </motion.div>
@@ -515,7 +515,7 @@ function CrmOutcomes() {
         <div className="mb-8 text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-muted">Outcome</p>
           <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-light md:text-6xl">
-            What changed once follow-up had a system.
+            Before and after the CRM.
           </h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -531,7 +531,7 @@ function CrmOutcomes() {
             >
               <h3 className="text-xl text-text-primary">{outcome.title}</h3>
               <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#14191f] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">Before</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60">Before</p>
                 <p className="mt-2 text-sm leading-7 text-text-primary/62">{outcome.before}</p>
               </div>
               <div className="mt-4 rounded-[1.4rem] border border-[#8f78c6]/18 bg-[linear-gradient(180deg,rgba(24,15,39,0.98),rgba(30,18,48,0.98))] p-4 shadow-[0_12px_28px_rgba(44,22,78,0.18)]">

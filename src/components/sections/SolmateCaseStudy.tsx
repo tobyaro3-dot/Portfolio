@@ -11,8 +11,8 @@ import {
 } from "../../data/solmateCaseStudy";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const };
@@ -66,7 +66,7 @@ function InteractionBeacon() {
       type="button"
       onClick={() => document.getElementById("solmate-factor-rail")?.scrollIntoView({ behavior: "smooth", block: "center" })}
       className="group relative mx-auto cursor-pointer overflow-hidden rounded-[1.6rem] border border-[#4fa8b8]/35 bg-[linear-gradient(135deg,rgba(78,133,191,0.18),rgba(79,168,184,0.08)_45%,rgba(242,169,0,0.14))] px-7 py-4 text-center shadow-[0_0_32px_rgba(78,133,191,0.14)] backdrop-blur-xl transition duration-300 hover:scale-[1.03] hover:border-[#89aacc]/55 hover:shadow-[0_0_48px_rgba(78,133,191,0.22)]"
-      aria-label="Click to interact with the product demo"
+      aria-label="Jump to the product demo"
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-70 transition duration-500 group-hover:translate-x-6" />
       <span className="pointer-events-none absolute -left-10 top-1/2 h-20 w-20 -translate-y-1/2 rounded-full bg-[#4fa8b8]/18 blur-3xl" />
@@ -74,7 +74,7 @@ function InteractionBeacon() {
       <span className="relative z-10 block">
         <span className="block text-[10px] uppercase tracking-[0.34em] text-[#89aacc]">Interactive Demo</span>
         <span className="mt-1 block font-display text-3xl italic leading-none text-[#e7f3ff]">
-          Click to interact
+          Try the demo
         </span>
       </span>
     </button>
@@ -163,7 +163,7 @@ function SolmateHero({
             onClick={onStart}
             className="mt-10 rounded-full border border-[#f2a900]/35 bg-[#f2a900]/12 px-7 py-3.5 text-sm font-semibold text-text-primary shadow-[0_0_42px_rgba(242,169,0,0.14)] transition hover:scale-105 hover:bg-[#f2a900]/18"
           >
-            Start walkthrough
+            Try the demo
           </motion.button>
         </motion.div>
 
@@ -185,7 +185,7 @@ function SolmateHero({
                 <div className="absolute inset-3 rounded border border-white/25" />
                 <div className="absolute left-1/2 top-3 bottom-3 w-px -translate-x-1/2 bg-white/20" />
                 <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20" />
-                <div className="absolute left-[12%] top-[72%] text-[10px] font-medium uppercase tracking-[0.16em] text-white/35">
+                <div className="absolute left-[12%] top-[72%] text-[10px] font-medium uppercase tracking-[0.16em] text-white/60">
                   Start
                 </div>
                 {[
@@ -313,7 +313,7 @@ function PhoneShell({
                   className={`flex-1 cursor-pointer rounded-full px-3 py-2 text-[11px] uppercase tracking-[0.18em] transition hover:scale-[1.03] active:scale-[0.98] ${
                     activeScreen === screen.id
                       ? "bg-[#f2a900] text-[#060f1e]"
-                      : "text-text-primary/45 hover:bg-white/[0.05] hover:text-text-primary"
+                      : "text-text-primary/60 hover:bg-white/[0.05] hover:text-text-primary"
                   }`}
                   aria-label={screen.label}
                 >
@@ -354,7 +354,7 @@ function PhoneShell({
               type="button"
               onClick={() => setActiveScreen(id as SolmateScreenId)}
               className={`relative z-10 flex cursor-pointer flex-col items-center gap-1 rounded-2xl px-3 py-2 text-[10px] font-semibold transition hover:scale-[1.05] active:scale-[0.97] ${
-                activeScreen === id ? "text-[#f2a900]" : "text-white/35"
+                activeScreen === id ? "text-[#f2a900]" : "text-white/60"
               }`}
               aria-label={label}
             >
@@ -408,7 +408,7 @@ function HomeScreen({
         ].map(([value, label]) => (
           <div key={label} className="rounded-2xl border border-white/10 bg-[#0d1f3c] p-4 text-center">
             <div className="text-3xl font-semibold text-[#f2a900]">{value}</div>
-            <div className="mt-2 text-[10px] uppercase tracking-[0.14em] text-white/45">{label}</div>
+            <div className="mt-2 text-[10px] uppercase tracking-[0.14em] text-white/60">{label}</div>
           </div>
         ))}
       </div>
@@ -428,9 +428,9 @@ function HomeScreen({
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2a900]/10 text-[#f2a900]">D</div>
             <div className="flex-1">
               <div className="text-sm font-semibold text-white">{title}</div>
-              <div className="mt-1 text-xs text-white/45">{meta}</div>
+              <div className="mt-1 text-xs text-white/60">{meta}</div>
             </div>
-            <div className="text-[11px] text-white/35">{date}</div>
+            <div className="text-[11px] text-white/60">{date}</div>
           </button>
         ))}
       </div>
@@ -456,7 +456,7 @@ function RecordScreen({
           ←
         </button>
         <div>
-          <p className="text-xs uppercase tracking-[0.16em] text-white/35">Capture</p>
+          <p className="text-xs uppercase tracking-[0.16em] text-white/60">Capture</p>
           <h3 className="text-lg font-semibold text-white">Record Pain Point</h3>
         </div>
       </div>
@@ -469,7 +469,7 @@ function RecordScreen({
             className={`rounded-full border px-4 py-2 text-xs font-semibold transition ${
               selectedTeam === team
                 ? "border-[#f2a900] bg-[#f2a900] text-[#060f1e]"
-                : "border-white/10 text-white/45 hover:border-white/20 hover:text-white/70"
+                : "border-white/10 text-white/60 hover:border-white/20 hover:text-white/70"
             }`}
           >
             {team}
@@ -492,7 +492,7 @@ function RecordScreen({
         </div>
       </div>
       <div className={`mb-5 rounded-2xl border border-white/10 bg-[#0d1f3c] p-4 transition ${zoneActive("record-transcript")}`}>
-        <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">Live transcript</p>
+        <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">Live transcript</p>
         <p className="mt-3 text-sm leading-7 text-white/75">{transcript}</p>
       </div>
       <button
@@ -520,7 +520,7 @@ function DrillsScreen({
           ←
         </button>
         <div>
-          <p className="text-xs uppercase tracking-[0.16em] text-white/35">Generate</p>
+          <p className="text-xs uppercase tracking-[0.16em] text-white/60">Generate</p>
           <h3 className="text-lg font-semibold text-white">Drill Plan</h3>
         </div>
       </div>
@@ -604,7 +604,7 @@ function DrillsScreen({
             </div>
             <div>
               <div className="text-sm font-semibold text-white">{title}</div>
-              <div className="mt-1 text-xs leading-6 text-white/45">{description}</div>
+              <div className="mt-1 text-xs leading-6 text-white/60">{description}</div>
             </div>
           </div>
         ))}
@@ -629,7 +629,7 @@ function TeamsScreen({
   return (
     <div>
       <div className="mb-5">
-        <p className="text-xs uppercase tracking-[0.16em] text-white/35">Library</p>
+        <p className="text-xs uppercase tracking-[0.16em] text-white/60">Library</p>
         <h3 className="text-lg font-semibold text-white">Team Profiles</h3>
       </div>
       <div className={`transition ${zoneActive("teams-cards")}`}>
@@ -645,7 +645,7 @@ function TeamsScreen({
                 {count}
               </div>
             </div>
-            <div className="mt-2 text-xs text-white/45">{details}</div>
+            <div className="mt-2 text-xs text-white/60">{details}</div>
             <div className={`mt-3 flex flex-wrap gap-2 transition ${zoneActive("teams-pain-tags")}`}>
               {(
                 index === 0
@@ -658,7 +658,7 @@ function TeamsScreen({
                   <span
                     key={tag}
                     className={`rounded-full px-3 py-1.5 text-[11px] ${
-                      tagIndex < 2 ? "bg-[#f2a900]/10 text-[#f2a900]" : "bg-white/5 text-white/45"
+                      tagIndex < 2 ? "bg-[#f2a900]/10 text-[#f2a900]" : "bg-white/5 text-white/60"
                     }`}
                   >
                     {tag}
@@ -680,9 +680,9 @@ function TeamsScreen({
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2a900]/10 text-[#f2a900]">D</div>
             <div className="flex-1">
               <div className="text-sm font-semibold text-white">{title}</div>
-              <div className="mt-1 text-xs text-white/45">{meta}</div>
+              <div className="mt-1 text-xs text-white/60">{meta}</div>
             </div>
-            <div className="text-[11px] text-white/35">{date}</div>
+            <div className="text-[11px] text-white/60">{date}</div>
           </div>
         ))}
       </div>
@@ -728,9 +728,9 @@ function SolmateInsightPanel({
     <AnimatePresence mode="wait">
       <motion.div
         key={factor.id}
-        initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: -18, filter: "blur(8px)" }}
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -18 }}
         transition={transition}
         className="rounded-[2rem] border border-[#f2a900]/18 bg-[#091322]/85 p-5 shadow-[0_24px_90px_rgba(242,169,0,0.08)] backdrop-blur-xl md:p-6"
       >
@@ -742,7 +742,7 @@ function SolmateInsightPanel({
           ["Why It Matters", factor.whyItMatters],
         ].map(([label, copy]) => (
           <div key={label} className="mt-4 border-t border-white/10 pt-4">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-white/60">{label}</p>
             <p className="mt-2 text-sm leading-7 text-text-primary/75">{copy}</p>
           </div>
         ))}
@@ -808,7 +808,7 @@ function SolmateOutcomes() {
             >
               <h3 className="text-xl text-text-primary">{outcome.title}</h3>
               <div className="mt-6 space-y-3">
-                <div className="rounded-2xl border border-white/10 bg-black/20 p-3 text-sm text-text-primary/45">
+                <div className="rounded-2xl border border-white/10 bg-black/20 p-3 text-sm text-text-primary/60">
                   {outcome.before}
                 </div>
                 <div className="mx-auto h-8 w-px bg-gradient-to-b from-white/15 to-[#f2a900]/70" />
@@ -851,10 +851,10 @@ export function SolmateCaseStudy() {
           <div className="mb-10">
             <p className="text-xs uppercase tracking-[0.35em] text-muted">Interactive product demo</p>
             <h2 className="mt-4 text-4xl font-light md:text-6xl">
-              Highlight the product decision that matters.
+              Pick a feature to see why it works the way it does.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-text-primary/65 md:text-base">
-              Each factor focuses one layer of the prototype and shows how the interface turns coaching complexity into clearer action.
+              Each tab opens one part of the prototype, with the problem I saw and the decision I made.
             </p>
           </div>
 

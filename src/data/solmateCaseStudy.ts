@@ -116,7 +116,7 @@ export const solmateFactors: SolmateFactor[] = [
     designMove:
       "I used recent drills, team counts, and drill history to make the system feel cumulative, so planning could be reused and improved over time.",
     whyItMatters:
-      "The product starts to feel like a living coaching library instead of a one-time generator.",
+      "Over time it becomes a library of drills that worked for each team.",
   },
 ];
 

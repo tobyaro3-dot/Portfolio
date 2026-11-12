@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const coverImage = "/national-lighthouse-museum-cover.png";
 
 const reveal = {
-  hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const transition = { duration: 0.52, ease: [0.22, 1, 0.36, 1] as const };
@@ -107,7 +107,7 @@ const midFiReplay = [
     title: "Wallet access confirmed the ticket, but it did not drive the task.",
     body: "The wallet clearly stored purchased tickets after checkout.",
     source: "Observation: wallet provides clear confirmation and access to purchased tickets.",
-    response: "Wallet should support confidence after purchase, not compete with the purchase path.",
+    response: "The wallet should reassure people after they buy and stay out of the way while they're buying.",
     screen: "Wallet",
     marker: "left-[64%] top-[77%]",
   },
@@ -159,9 +159,9 @@ const nextIteration = {
 };
 
 const limitations = [
-  "This was an academic HCI project, not a commissioned implementation.",
+  "This was a class project. The museum didn't commission it, and the app wasn't launched.",
   "The museum opportunity came through a teammate's personal connection, which helped ground the project but did not make it a formal client engagement.",
-  "The report documents prototype testing and post-experience feedback, not launched product analytics.",
+  "The evidence comes from prototype tests and post-test surveys. There is no live usage data.",
   "The findings support directional design decisions, but broader validation would require more participants and in-context museum testing.",
 ];
 
@@ -329,7 +329,7 @@ function Origin() {
         <div>
           <Eyebrow>How it started</Eyebrow>
           <h2 className="mt-5 text-4xl font-light leading-[1.04] text-text-primary md:text-6xl">
-            This project began with a connection, not a formal client brief.
+            A teammate's family connection gave us a real museum to study.
           </h2>
         </div>
         <div className="space-y-7 text-base leading-8 text-text-primary/70 md:text-lg">
@@ -363,7 +363,7 @@ function ResearchContext() {
         <div>
           <Eyebrow>Research context</Eyebrow>
           <p className="mt-5 max-w-2xl text-3xl font-light leading-tight text-text-primary md:text-5xl">
-            The app idea was not just digital museum content. It was a question of attention.
+            Every feature we added was one more thing a visitor had to figure out.
           </p>
           <p className="mt-6 max-w-xl text-base leading-8 text-text-primary/66">
             The team explored a companion app that could support ticket purchasing, QR scanning, descriptive audio, maps, tours, accessibility, membership, and wallet storage. The research challenge was deciding which parts helped the visit and which parts risked making visitors work harder.
@@ -401,7 +401,7 @@ function QuestionsAndApproach() {
         <div>
           <Eyebrow>What we needed to learn</Eyebrow>
           <h2 className="mt-5 text-4xl font-light leading-[1.04] text-text-primary md:text-6xl">
-            The methods came from the questions, not the other way around.
+            We picked each method to answer a specific question.
           </h2>
           <div className="mt-8 space-y-5">
             {researchQuestions.map((question, index) => (
@@ -545,7 +545,7 @@ function ThinkAloudReplay() {
                   >
                     <div className="grid gap-5 lg:grid-cols-[6rem_1fr]">
                       <div>
-                        <p className="text-[10px] uppercase tracking-[0.22em] text-text-primary/38">Time</p>
+                        <p className="text-[10px] uppercase tracking-[0.22em] text-text-primary/60">Time</p>
                         <p className="mt-2 text-lg text-text-primary/78">{step.time}</p>
                       </div>
                       <div>
@@ -629,10 +629,10 @@ function InsightShift() {
         </div>
         <div className="border-t border-white/8 px-8 py-12 text-center md:px-12">
           <p className="font-display text-6xl italic leading-none text-text-primary md:text-8xl">
-            Useful does not mean necessary.
+            Visitors wanted the right ticket first. Everything else could wait.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-primary/62">
-            That was the turning point. The wallet could stay, but the research pushed our priorities toward immediate clarity: ticket hierarchy, scanner meaning, checkout expectations, and fewer detours.
+            The wallet stayed, but the research pushed our priorities toward immediate clarity: ticket hierarchy, scanner meaning, checkout expectations, and fewer detours.
           </p>
         </div>
       </div>
