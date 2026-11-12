@@ -1,36 +1,35 @@
-import { useRef } from "react";
-import { useHlsVideo } from "../../hooks/useHlsVideo";
-
 export type HlsVideoProps = {
-  src: string;
+  src?: string;
   className?: string;
   flipped?: boolean;
   overlayClassName?: string;
 };
 
+/**
+ * Animated blue nebula background, drawn with CSS.
+ * Replaces the old streamed background video, which the host stopped serving.
+ * Keeps the same props so existing sections did not need to change.
+ */
 export function HlsVideo({
-  src,
   className = "",
   flipped = false,
   overlayClassName,
 }: HlsVideoProps) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  useHlsVideo(videoRef, src);
-
   return (
     <>
-      <video
-        ref={videoRef}
-        className={`background-video pointer-events-none absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover ${
+      <div
+        aria-hidden="true"
+        className={`nebula-bg pointer-events-none absolute inset-0 overflow-hidden ${
           flipped ? "scale-y-[-1]" : ""
         } ${className}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-      />
+      >
+        <span className="nebula-swirl" />
+        <span className="nebula-cloud nebula-cloud-a" />
+        <span className="nebula-cloud nebula-cloud-b" />
+        <span className="nebula-cloud nebula-cloud-c" />
+        <span className="nebula-core" />
+        <span className="nebula-stars" />
+      </div>
       {overlayClassName ? (
         <div className={`absolute inset-0 ${overlayClassName}`} />
       ) : null}
