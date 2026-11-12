@@ -73,15 +73,15 @@ export function SelectedWorks() {
           align="center"
           title={
             <>
-              Things I&apos;ve{" "}
+              Designing{" "}
               <span className="font-display italic text-text-primary">
-                designed
+                systems
               </span>{" "}
-              and{" "}
+              that make{" "}
               <span className="font-display italic text-text-primary">
-                built
-              </span>
-              .
+                complex
+              </span>{" "}
+              things feel simple.
             </>
           }
           actionLabel="View all work"
