@@ -98,25 +98,6 @@ export function SelectedWorks() {
         <div className="mt-24 md:mt-28">
           <div className="mb-8 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
-              Marketing &amp; Automation
-            </p>
-            <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
-              Systems that turn contacts into customers.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">
-            {automationProjects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                onOpen={handleOpenProject}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="mt-24 md:mt-28">
-          <div className="mb-8 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
               UX Research &amp; HCI
             </p>
             <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
@@ -133,6 +114,25 @@ export function SelectedWorks() {
               />
             ))}
           </div>
+          </div>
+        </div>
+        <div className="mt-24 md:mt-28">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.32em] text-text-primary/40">
+              Marketing &amp; Automation
+            </p>
+            <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
+              Systems that turn contacts into customers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">
+            {automationProjects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                onOpen={handleOpenProject}
+              />
+            ))}
           </div>
         </div>
       </div>
