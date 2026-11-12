@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-import { videoSource } from "../../data/portfolio";
+import { roles, videoSource } from "../../data/portfolio";
 import { useGsapContext } from "../../hooks/useGsapContext";
+import { useRoleCycle } from "../../hooks/useRoleCycle";
 import { SECTION_IDS } from "../../lib/constants";
 import { gsap } from "../../lib/animation";
 import { HlsVideo } from "../layout/HlsVideo";
@@ -15,6 +16,7 @@ const messyPhrase = "XQ7 / 4R9N :: V3LTA-09 // KRYPT";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const roleIndex = useRoleCycle(roles.length, 2000);
   const [isPhraseLocked, setIsPhraseLocked] = useState(false);
 
   useGsapContext(sectionRef, () => {
@@ -138,7 +140,14 @@ export function Hero() {
           Tobi Aro.
         </h1>
         <p className="hero-role-reveal mx-auto mb-5 text-lg text-text-primary/85 md:text-2xl">
-          Product designer and UX researcher in Orlando, FL.
+          A{" "}
+          <span
+            key={roleIndex}
+            className="inline-block animate-role-fade-in font-display italic text-text-primary"
+          >
+            {roles[roleIndex]}
+          </span>{" "}
+          in Orlando, FL.
         </p>
         <button
           type="button"

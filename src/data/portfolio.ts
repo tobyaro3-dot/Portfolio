@@ -58,7 +58,7 @@ export const navLinks = [
   { label: "Work", target: SECTION_IDS.work },
 ] as const;
 
-export const roles = ["Creative", "Fullstack", "Founder", "Scholar"];
+export const roles = ["Product Designer", "UX Researcher", "Web Designer", "Systems Builder"];
 
 export const projects: Project[] = [
   {

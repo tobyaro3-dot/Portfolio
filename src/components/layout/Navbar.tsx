@@ -123,7 +123,7 @@ export function Navbar() {
   ] as const;
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-start justify-center px-4 pt-4 md:pt-6">
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-start justify-end px-4 pt-4 sm:justify-center md:pt-6">
       <div
         className={`front-nav-logo absolute left-4 top-4 flex h-12 w-32 shrink-0 items-center justify-center transition duration-500 sm:w-36 md:left-6 md:top-6 ${
           showHomeChrome
