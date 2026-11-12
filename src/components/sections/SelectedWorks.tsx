@@ -21,6 +21,10 @@ export function SelectedWorks() {
       navigate("/work/tisato");
       return;
     }
+    if (project.slug === "showtime") {
+      navigate("/work/showtime");
+      return;
+    }
     if (project.slug === "tisato-crm") {
       navigate("/work/tisato-crm");
       return;
@@ -122,7 +126,7 @@ export function SelectedWorks() {
               Marketing &amp; Automation
             </p>
             <p className="mt-4 text-xl leading-8 text-text-primary/68 md:text-2xl">
-              CRM and follow-up systems for a real business.
+              Ads, lead capture, and follow-up for real businesses.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:items-stretch lg:gap-6">

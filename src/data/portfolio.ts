@@ -240,6 +240,31 @@ export const automationProjects: Project[] = [
     },
     details: [],
   },
+  {
+    slug: "showtime",
+    title: "Showtime",
+    logo: "SHOWTIME",
+    subtitle:
+      "An Instagram Reels ad and lead form that brought a youth soccer program about 40 parent leads for about $250.",
+    role: "Paid Social",
+    scope: "Meta Ads, Lead Forms, Audience Targeting",
+    context: "Summer program campaign for a youth soccer club",
+    location: "Central Florida",
+    summary:
+      "A small Meta campaign aimed at past followers and lookalikes, with a lead form inside Instagram.",
+    tags: ["Meta Ads", "Lead Generation", "Instagram"],
+    image: "/showtime-cover.webp",
+    span: "third",
+    preview: {
+      device: "phone",
+      tone: "sport",
+      accent: "#f2c230",
+      secondaryAccent: "#ffffff",
+      screenLabel: "~40 leads",
+      metric: "~$6.25 per lead",
+    },
+    details: [],
+  },
 ];
 
 export const researchProjects: Project[] = [

@@ -200,6 +200,7 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
     project.slug === "tap" ||
     project.slug === "tisato" ||
     project.slug === "tisato-crm" ||
+    project.slug === "showtime" ||
     project.slug === "national-lighthouse-museum" ||
     project.slug === "why-people-stop-using-apps" ||
     project.slug === "tradetempr";
